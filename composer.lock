@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6de92525276b9e600ba96f03f7e730e8",
+    "content-hash": "4a729f6908e594ed0747051f92b07f70",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -451,16 +451,16 @@
         },
         {
             "name": "kevinpapst/adminlte-bundle",
-            "version": "dev-master",
+            "version": "0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kevinpapst/AdminLTEBundle.git",
-                "reference": "7f3e4b5615701a6a8712db7cc126aae99e898c94"
+                "reference": "b810a871b9b0a616c0da388dc68804904ba3e9d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kevinpapst/AdminLTEBundle/zipball/7f3e4b5615701a6a8712db7cc126aae99e898c94",
-                "reference": "7f3e4b5615701a6a8712db7cc126aae99e898c94",
+                "url": "https://api.github.com/repos/kevinpapst/AdminLTEBundle/zipball/b810a871b9b0a616c0da388dc68804904ba3e9d3",
+                "reference": "b810a871b9b0a616c0da388dc68804904ba3e9d3",
                 "shasum": ""
             },
             "require": {
@@ -513,10 +513,10 @@
             ],
             "description": "Admin Theme based on the AdminLTE 2.3 for easy integration with Symfony 4",
             "support": {
-                "source": "https://github.com/kevinpapst/AdminLTEBundle/tree/master",
+                "source": "https://github.com/kevinpapst/AdminLTEBundle/tree/0.1",
                 "issues": "https://github.com/kevinpapst/AdminLTEBundle/issues"
             },
-            "time": "2018-07-01T20:22:26+00:00"
+            "time": "2018-07-01T20:45:27+00:00"
         },
         {
             "name": "psr/cache",
@@ -3835,7 +3835,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "kevinpapst/adminlte-bundle": 20,
         "symfony/lts": 20
     },
     "prefer-stable": false,
