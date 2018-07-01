@@ -1,0 +1,49 @@
+{% extends '@AdminLTE/layout/default-layout.html.twig' %}
+
+{% block avanzu_page_title %} {{ 'forms.title'|trans }} {% endblock %}
+{% block avanzu_page_subtitle %} {{ 'forms.subtitle'|trans }} {% endblock %}
+
+{% block avanzu_page_content %}
+    <div class="row">
+        <div class="col-md-6">
+            {% embed '@AdminLTE/Widgets/box-widget.html.twig' %}
+                {% block box_before %}{{ form_start(form) }}{% endblock %}
+                {% block box_title %}{{ 'A simple form demo'|trans }}{% endblock %}
+                {% block box_body %}{{ form_widget(form) }}{% endblock %}
+                {% block box_footer %}
+                    <div class="pull-right">
+                        <button type="reset" class="btn btn-warning "><i class="fa fa-times"></i> {{ 'Cancel'|trans }}</button>
+                        <button type="submit" class="btn btn-primary "><i class="fa fa-check-square"></i> {{ 'Submit'|trans }}</button>
+                    </div>
+                {% endblock %}
+
+                {% block box_after %}{{ form_end(form)}}{% endblock %}
+            {% endembed %}
+        </div>
+        <div class="col-md-6">
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block avanzu_javascripts_inline %}
+    <script>
+        $(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-blue',
+                radioClass: 'iradio_square-blue',
+                increaseArea: '20%' // optional
+            });
+            //$('select').select2();
+            $('[data-datepickerenable="on"]').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                locale: {
+                    format: "YYYY-MM-DD",
+                    firstDay: 1
+                }
+            });
+            //$('[data-timepicker="on"]').timepicker();
+        });
+    </script>
+{% endblock %}
