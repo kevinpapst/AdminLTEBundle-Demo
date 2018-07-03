@@ -18,6 +18,10 @@
                 <source>menu.logout</source>
                 <target>Logout</target>
             </trans-unit>
+            <trans-unit id="forms.title">
+                <source>forms.title</source>
+                <target>Form theme showcase</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
