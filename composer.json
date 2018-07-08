@@ -67,11 +67,5 @@
         "symfony": {
             "allow-contrib": false
         }
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/kevinpapst/AdminLTEBundle"
-        }
-    ]
+    }
 }
