@@ -1,7 +1,4 @@
 {
-    "almasaeed2010/adminlte": {
-        "version": "v2.3.11"
-    },
     "composer/semver": {
         "version": "1.4.2"
     },
