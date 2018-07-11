@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f292fd84c06020a4855e77151c69a1e",
+    "content-hash": "06daa85373cd1647f6e3c73b6f388a97",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -411,29 +411,28 @@
         },
         {
             "name": "kevinpapst/adminlte-bundle",
-            "version": "0.3",
+            "version": "dev-avanzu-shim",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kevinpapst/AdminLTEBundle.git",
-                "reference": "d7210c249e782b143a5c72f119c4bf463cbb38e5"
+                "reference": "bde3974e6ef5fe1ef628228ac35514f7eef267ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kevinpapst/AdminLTEBundle/zipball/d7210c249e782b143a5c72f119c4bf463cbb38e5",
-                "reference": "d7210c249e782b143a5c72f119c4bf463cbb38e5",
+                "url": "https://api.github.com/repos/kevinpapst/AdminLTEBundle/zipball/bde3974e6ef5fe1ef628228ac35514f7eef267ec",
+                "reference": "bde3974e6ef5fe1ef628228ac35514f7eef267ec",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1.3",
-                "symfony/config": "^4.0",
-                "symfony/dependency-injection": "^4.0",
-                "symfony/event-dispatcher": "^4.0",
-                "symfony/framework-bundle": "^4.0",
-                "symfony/http-foundation": "^4.0",
-                "symfony/http-kernel": "^4.0",
-                "symfony/options-resolver": "^4.0",
-                "symfony/security": "^4.0",
-                "twig/twig": "^2.0"
+                "symfony/config": ">3.4",
+                "symfony/dependency-injection": ">3.4",
+                "symfony/event-dispatcher": ">3.4",
+                "symfony/http-foundation": ">3.4",
+                "symfony/http-kernel": ">3.4",
+                "symfony/options-resolver": ">3.4",
+                "symfony/security-core": ">3.4",
+                "twig/twig": ">2.0"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.10",
@@ -448,6 +447,7 @@
                     "KevinPapst\\AdminLTEBundle\\": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -471,11 +471,7 @@
                 }
             ],
             "description": "Admin Theme based on the AdminLTE 2.3 for easy integration with Symfony 4",
-            "support": {
-                "source": "https://github.com/kevinpapst/AdminLTEBundle/tree/master",
-                "issues": "https://github.com/kevinpapst/AdminLTEBundle/issues"
-            },
-            "time": "2018-07-08T17:57:25+00:00"
+            "time": "2018-07-11T22:10:35+00:00"
         },
         {
             "name": "psr/cache",
@@ -3794,6 +3790,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "kevinpapst/adminlte-bundle": 20,
         "symfony/lts": 20
     },
     "prefer-stable": false,

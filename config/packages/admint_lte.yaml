@@ -34,7 +34,7 @@ admin_lte:
 
     routes:
         adminlte_welcome: homepage
-        adminlte_login: login
+        adminlte_login: security_login
         adminlte_message: message
         adminlte_messages: messages
         adminlte_notification: notification
