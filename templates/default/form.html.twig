@@ -1,4 +1,7 @@
-{% extends '@AdminLTE/layout/default-layout.html.twig' %}
+{% extends 'base-avanzu.html.twig' %}
+{#
+    Demo of the "avanzu shim layout" capabilities
+#}
 
 {% block avanzu_page_title %} {{ 'forms.title'|trans }} {% endblock %}
 {% block avanzu_page_subtitle %} {{ 'forms.subtitle'|trans }} {% endblock %}
@@ -26,7 +29,8 @@
     </div>
 {% endblock %}
 
-{% block avanzu_javascripts_inline %}
+{% block javascripts %}
+    {{ parent() }}
     <script>
         $(function () {
             $('input').iCheck({

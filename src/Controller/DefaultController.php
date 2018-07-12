@@ -38,22 +38,6 @@ class DefaultController extends Controller
         ]);
     }
 
-    /**
-     * @Route("/login", defaults={}, name="login")
-     */
-    public function login()
-    {
-        return $this->render('default/login.html.twig');
-    }
-
-    /**
-     * @Route("/logout", defaults={}, name="logout")
-     */
-    public function logout()
-    {
-        return $this->render('default/index.html.twig');
-    }
-
     public function userPreferences()
     {
         return $this->render('control-sidebar/settings.html.twig', []);
