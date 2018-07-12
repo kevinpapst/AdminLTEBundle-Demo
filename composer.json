@@ -7,7 +7,7 @@
         "php": "^7.1.3",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "kevinpapst/adminlte-bundle": "dev-avanzu-shim",
+        "kevinpapst/adminlte-bundle": "^1.0",
         "sensio/framework-extra-bundle": "^5.2",
         "symfony/asset": "^4.1",
         "symfony/console": "^4.1",
