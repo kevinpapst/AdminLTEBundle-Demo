@@ -1,7 +1,0 @@
-{% extends '@AdminLTE/layout/login-layout.html.twig' %}
-
-{% block logo_login %}<b>Demo</b> Login{% endblock %}
-
-{% block login_form_end %}
-    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
-{% endblock %}

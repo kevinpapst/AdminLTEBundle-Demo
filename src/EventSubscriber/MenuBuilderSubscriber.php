@@ -69,11 +69,11 @@ class MenuBuilderSubscriber implements EventSubscriberInterface
 
         if ($this->security->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
             $event->addItem(
-                new MenuItemModel('logout', 'menu.logout', 'security_logout', [], 'fas fa-sign-out-alt')
+                new MenuItemModel('logout', 'menu.logout', 'fos_user_security_logout', [], 'fas fa-sign-out-alt')
             );
         } else {
             $event->addItem(
-                new MenuItemModel('login', 'menu.login', 'security_login', [], 'fas fa-sign-in-alt')
+                new MenuItemModel('login', 'menu.login', 'fos_user_security_login', [], 'fas fa-sign-in-alt')
             );
         }
 
