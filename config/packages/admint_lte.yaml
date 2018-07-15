@@ -44,4 +44,4 @@ admin_lte:
         adminlte_notifications: notifications
         adminlte_task: task
         adminlte_tasks: tasks
-        adminlte_profile: profile
+        adminlte_profile: fos_user_profile_show

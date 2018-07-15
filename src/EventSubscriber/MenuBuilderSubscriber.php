@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Kimai time-tracking app.
+ * This file is part of the AdminLTE-Bundle demo.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -9,8 +9,6 @@
 
 namespace App\EventSubscriber;
 
-use App\Event\ConfigureAdminMenuEvent;
-use App\Event\ConfigureMainMenuEvent;
 use KevinPapst\AdminLTEBundle\Event\SidebarMenuEvent;
 use KevinPapst\AdminLTEBundle\Model\MenuItemModel;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;

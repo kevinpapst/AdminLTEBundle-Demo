@@ -12,3 +12,7 @@ fos_user_registration:
 fos_user_resetting:
     prefix: /resetting
     resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+
+fos_user_profile:
+    prefix: /profile
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
