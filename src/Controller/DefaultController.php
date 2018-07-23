@@ -38,6 +38,30 @@ class DefaultController extends Controller
         ]);
     }
 
+    /**
+     * @Route("/forms2", defaults={}, name="forms2")
+     */
+    public function forms2()
+    {
+        $form = $this->createForm(FormDemoModelType::class);
+
+        return $this->render('default/form2.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/forms3", defaults={}, name="forms3")
+     */
+    public function forms3()
+    {
+        $form = $this->createForm(FormDemoModelType::class);
+
+        return $this->render('default/form3.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
+
     public function userPreferences()
     {
         return $this->render('control-sidebar/settings.html.twig', []);

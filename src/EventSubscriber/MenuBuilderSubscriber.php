@@ -65,6 +65,15 @@ class MenuBuilderSubscriber implements EventSubscriberInterface
             new MenuItemModel('forms', 'menu.form', 'forms', [], 'fas fa-tachometer-alt')
         );
 
+        $demo = new MenuItemModel('demo', 'Demo', null, [], 'far fa-arrow-alt-circle-right');
+        $demo->addChild(
+            new MenuItemModel('sub-demo', 'Forms Demo 2', 'forms2', [], 'far fa-arrow-alt-circle-down')
+        )->addChild(
+            new MenuItemModel('sub-demo2', 'Forms Demo 3', 'forms3', [], 'far fa-arrow-alt-circle-up')
+        );
+
+        $event->addItem($demo);
+
         if ($this->security->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
             $event->addItem(
                 new MenuItemModel('logout', 'menu.logout', 'fos_user_security_logout', [], 'fas fa-sign-out-alt')

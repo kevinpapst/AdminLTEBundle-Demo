@@ -13,11 +13,11 @@ admin_lte:
         # if activated, the boxed_layout will be deactivated
         fixed_layout: false
         # boxed layout (true) or full-screen (false)
-        boxed_layout: false
+        boxed_layout: true
         # initial collapsed state of the sidebar
         collapsed_sidebar: false
         # whether the logo collapses or not
-        mini_sidebar: false
+        mini_sidebar: true
         # all tabs in the control sidebar
         control_sidebar:
             home:

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a3f05409023d3fae559871576a39037a",
+    "content-hash": "25c06cece94aa8740a7829b998983c9c",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1113,16 +1113,16 @@
         },
         {
             "name": "kevinpapst/adminlte-bundle",
-            "version": "1.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kevinpapst/AdminLTEBundle.git",
-                "reference": "e9ba0374f1cb952d9c987b5d2f2fd78274c8d3dd"
+                "reference": "935fd27e4275831199196d81d395e0ae2f3a878e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kevinpapst/AdminLTEBundle/zipball/e9ba0374f1cb952d9c987b5d2f2fd78274c8d3dd",
-                "reference": "e9ba0374f1cb952d9c987b5d2f2fd78274c8d3dd",
+                "url": "https://api.github.com/repos/kevinpapst/AdminLTEBundle/zipball/935fd27e4275831199196d81d395e0ae2f3a878e",
+                "reference": "935fd27e4275831199196d81d395e0ae2f3a878e",
                 "shasum": ""
             },
             "require": {
@@ -1169,7 +1169,7 @@
                 }
             ],
             "description": "Admin Theme based on the AdminLTE 2.3 for easy integration with Symfony 4",
-            "time": "2018-07-21T18:49:21+00:00"
+            "time": "2018-07-23T15:29:43+00:00"
         },
         {
             "name": "ocramius/package-versions",
@@ -5134,6 +5134,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "kevinpapst/adminlte-bundle": 20,
         "symfony/lts": 20
     },
     "prefer-stable": false,

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block page_title %} Form demo 3 {% endblock %}
+{% block page_subtitle %} Fullscreen width form {% endblock %}
+
+{% block page_content %}
+    <div class="row">
+        <div class="col-md-12">
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                <div class="pull-right">
+                    <button type="reset" class="btn btn-warning "><i class="fa fa-times"></i> {{ 'Cancel'|trans }}</button>
+                    <button type="submit" class="btn btn-primary "><i class="fa fa-check-square"></i> {{ 'Submit'|trans }}</button>
+                </div>
+                {{ form_end(form)}}
+        </div>
+    </div>
+{% endblock %}
