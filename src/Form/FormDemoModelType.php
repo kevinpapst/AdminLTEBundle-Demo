@@ -23,7 +23,7 @@ class FormDemoModelType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $options = [
+        $radios = [
             'This is option 1' => 'opt1',
             'This is option 2' => 'opt2',
             'This is option 3' => 'opt3',
@@ -35,10 +35,27 @@ class FormDemoModelType extends AbstractType
             'This is choice 3' => 'choice3',
         ];
 
+        $options = [
+            'This is the first option' => 'choice1',
+            'This is choice 2' => 'choice2',
+            'This is choice 3' => 'choice3',
+            'Honey' => 'choice4',
+            'Banana' => 'choice5',
+            'Apples' => 'choice6',
+            'Oranges' => 'choice7',
+            'Mustard' => 'choice8',
+            'Hot dog with mustard' => 'choice9',
+        ];
+
         $builder
             ->add('name', TextType::class, ['help' => 'some help text'])
             ->add('gender', ChoiceType::class, ['choices' => ['male' => 'm', 'female' => 'f']])
-            ->add('someOption', ChoiceType::class, ['choices' => $options, 'expanded' => true])
+            ->add('bootstrapSelect', ChoiceType::class, [
+                'choices' => $options,
+                'multiple' => true,
+                'attr' => ['class' => 'selectpicker', 'data-size' => 5, 'data-live-search' => true]
+            ])
+            ->add('someRadio', ChoiceType::class, ['choices' => $radios, 'expanded' => true])
             ->add('someChoices', ChoiceType::class, ['choices' => $choices, 'expanded' => true, 'multiple' => true])
             ->add('username')
             ->add('email')

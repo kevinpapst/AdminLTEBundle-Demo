@@ -1,14 +1,11 @@
-{% extends 'base-avanzu.html.twig' %}
-{#
-    Demo of the "avanzu shim layout" capabilities
-#}
+{% extends 'base.html.twig' %}
 
-{% block avanzu_page_title %} {{ 'forms.title'|trans }} {% endblock %}
-{% block avanzu_page_subtitle %} {{ 'forms.subtitle'|trans }} {% endblock %}
+{% block page_title %} Form demo {% endblock %}
+{% block page_subtitle %} Fullscreen width form {% endblock %}
 
-{% block avanzu_page_content %}
+{% block page_content %}
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             {% embed '@AdminLTE/Widgets/box-widget.html.twig' %}
                 {% block box_before %}{{ form_start(form) }}{% endblock %}
                 {% block box_title %}{{ 'A simple form demo'|trans }}{% endblock %}
@@ -23,9 +20,6 @@
                 {% block box_after %}{{ form_end(form)}}{% endblock %}
             {% endembed %}
         </div>
-        <div class="col-md-6">
-            {% block form_sidebar %}{% endblock %}
-        </div>
     </div>
 {% endblock %}
 
@@ -38,16 +32,6 @@
                 radioClass: 'iradio_square-blue',
                 increaseArea: '20%' // optional
             });
-            //$('select').select2();
-            $('[data-datepickerenable="on"]').daterangepicker({
-                singleDatePicker: true,
-                showDropdowns: true,
-                locale: {
-                    format: "YYYY-MM-DD",
-                    firstDay: 1
-                }
-            });
-            //$('[data-timepicker="on"]').timepicker();
         });
     </script>
 {% endblock %}
