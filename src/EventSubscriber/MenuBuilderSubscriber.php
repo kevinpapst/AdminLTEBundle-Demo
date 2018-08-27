@@ -10,8 +10,8 @@
 namespace App\EventSubscriber;
 
 use KevinPapst\AdminLTEBundle\Event\SidebarMenuEvent;
+use KevinPapst\AdminLTEBundle\Event\ThemeEvents;
 use KevinPapst\AdminLTEBundle\Model\MenuItemModel;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
 
@@ -21,22 +21,15 @@ use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
 class MenuBuilderSubscriber implements EventSubscriberInterface
 {
     /**
-     * @var EventDispatcherInterface
-     */
-    private $eventDispatcher;
-    /**
      * @var AuthorizationCheckerInterface
      */
     private $security;
 
     /**
-     * MenuBuilderSubscriber constructor.
-     * @param EventDispatcherInterface $dispatcher
      * @param AuthorizationCheckerInterface $security
      */
-    public function __construct(EventDispatcherInterface $dispatcher, AuthorizationCheckerInterface $security)
+    public function __construct(AuthorizationCheckerInterface $security)
     {
-        $this->eventDispatcher = $dispatcher;
         $this->security = $security;
     }
 
@@ -46,7 +39,8 @@ class MenuBuilderSubscriber implements EventSubscriberInterface
     public static function getSubscribedEvents(): array
     {
         return [
-            'theme.sidebar_setup_menu' => ['onSetupNavbar', 100],
+            ThemeEvents::THEME_SIDEBAR_SETUP_MENU => ['onSetupNavbar', 100],
+            ThemeEvents::THEME_BREADCRUMB => ['onSetupNavbar', 100],
         ];
     }
 
@@ -62,7 +56,7 @@ class MenuBuilderSubscriber implements EventSubscriberInterface
         );
 
         $event->addItem(
-            new MenuItemModel('forms', 'menu.form', 'forms', [], 'fas fa-tachometer-alt')
+            new MenuItemModel('forms', 'menu.form', 'forms', [], 'fab fa-wpforms')
         );
 
         $demo = new MenuItemModel('demo', 'Demo', null, [], 'far fa-arrow-alt-circle-right');
@@ -70,6 +64,10 @@ class MenuBuilderSubscriber implements EventSubscriberInterface
             new MenuItemModel('sub-demo', 'Forms Demo 2', 'forms2', [], 'far fa-arrow-alt-circle-down')
         )->addChild(
             new MenuItemModel('sub-demo2', 'Form Sidebar Demo', 'forms3', [], 'far fa-arrow-alt-circle-up')
+        );
+
+        $event->addItem(
+            new MenuItemModel('Context', 'AdminLTE context', 'context', [], 'fas fa-code')
         );
 
         $event->addItem($demo);
@@ -99,10 +97,8 @@ class MenuBuilderSubscriber implements EventSubscriberInterface
         foreach ($items as $item) {
             if ($item->hasChildren()) {
                 $this->activateByRoute($route, $item->getChildren());
-            } else {
-                if ($item->getRoute() == $route) {
-                    $item->setIsActive(true);
-                }
+            } elseif ($item->getRoute() == $route) {
+                $item->setIsActive(true);
             }
         }
     }

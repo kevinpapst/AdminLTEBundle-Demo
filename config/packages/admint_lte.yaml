@@ -6,19 +6,11 @@
 #
 admin_lte:
     options:
-        # default image for missing user avatar images
         default_avatar: bundles/adminlte/images/default_avatar.png
-        # the color skin
-        skin: skin-blue
-        # if activated, the boxed_layout will be deactivated
         fixed_layout: false
-        # boxed layout (true) or full-screen (false)
         boxed_layout: true
-        # initial collapsed state of the sidebar
         collapsed_sidebar: false
-        # whether the logo collapses or not
         mini_sidebar: true
-        # all tabs in the control sidebar
         control_sidebar:
             home:
                 icon: fas fa-home
@@ -26,6 +18,20 @@ admin_lte:
             settings:
                 icon: fas fa-cogs
                 controller: 'App\Controller\DefaultController::userPreferences'
+
+#    theme:
+#        widget:
+#            type: warning
+#            bordered: true
+#            collapsible: true
+#            collapsible_title: 'Collapse'
+#            removable: false
+#            removable_title: 'Remove'
+#            solid: false
+#            use_footer: false
+#        button:
+#            type: 'primary'
+#            size: false
 
     knp_menu:
         enable: false
@@ -38,10 +44,10 @@ admin_lte:
         adminlte_login_check: fos_user_security_check
         adminlte_registration: fos_user_registration_register
         adminlte_password_reset: fos_user_resetting_request
-        adminlte_message: message
-        adminlte_messages: messages
-        adminlte_notification: notification
-        adminlte_notifications: notifications
-        adminlte_task: task
-        adminlte_tasks: tasks
+        adminlte_message: homepage
+        adminlte_messages: homepage
+        adminlte_notification: homepage
+        adminlte_notifications: homepage
+        adminlte_task: homepage
+        adminlte_tasks: homepage
         adminlte_profile: fos_user_profile_show
