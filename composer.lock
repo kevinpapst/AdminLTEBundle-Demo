@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "25c06cece94aa8740a7829b998983c9c",
+    "content-hash": "303c6fafecd692d6684d2475c069ec3b",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1355,16 +1355,16 @@
         },
         {
             "name": "kevinpapst/adminlte-bundle",
-            "version": "dev-master",
+            "version": "2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kevinpapst/AdminLTEBundle.git",
-                "reference": "741610b2552dabfecbfb5cb8009d04322e09812e"
+                "reference": "43840776d45cb86a4dbcb915efa582eb41c5a564"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kevinpapst/AdminLTEBundle/zipball/741610b2552dabfecbfb5cb8009d04322e09812e",
-                "reference": "741610b2552dabfecbfb5cb8009d04322e09812e",
+                "url": "https://api.github.com/repos/kevinpapst/AdminLTEBundle/zipball/43840776d45cb86a4dbcb915efa582eb41c5a564",
+                "reference": "43840776d45cb86a4dbcb915efa582eb41c5a564",
                 "shasum": ""
             },
             "require": {
@@ -1411,8 +1411,8 @@
                     "homepage": "https://www.kevinpapst.de"
                 }
             ],
-            "description": "Admin Theme based on the AdminLTE 2.3 for easy integration with Symfony 4",
-            "time": "2018-08-27T17:48:45+00:00"
+            "description": "Admin Theme based on the AdminLTE 2.4.8 for easy integration with Symfony 4",
+            "time": "2018-09-02T17:21:38+00:00"
         },
         {
             "name": "ocramius/package-versions",
@@ -5377,7 +5377,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "kevinpapst/adminlte-bundle": 20,
         "symfony/lts": 20
     },
     "prefer-stable": false,
