@@ -56,6 +56,11 @@
                         nunc.
                     </div>
                 {% endblock %}
+                {% block box_footer %}
+                    <div class="pull-right">
+                        {{ btn.link_button('save', '#', 'floppy') }}
+                    </div>
+                {% endblock %}
             {% endembed %}
         </div>
         <div class="col-md-6">
@@ -83,10 +88,9 @@
                         nunc.
                     </div>
                 {% endblock %}
-
                 {% block box_footer %}
                     <div class="pull-right">
-                        {{ btn.link_button('save', '#', 'floppy', 'success') }}
+                        {{ btn.link_button('save', '#', 'far fa-save', 'success', 'lg') }}
                     </div>
                 {% endblock %}
             {% endembed %}

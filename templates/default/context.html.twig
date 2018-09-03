@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+{#
+    Demo of the "avanzu shim layout" capabilities
+#}
+
+{% block page_title %}Twig Context Helper{% endblock %}
+{% block page_subtitle %}available AdminLTE configurations{% endblock %}
+
+{% block page_content %}
+
+    <div class="row">
+        <div class="col-md-12">
+            <p>
+                You have access to the following configurations within your twig template.
+            </p>
+            {{ dump(admin_lte_context.options) }}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Some code examples</h3>
+
+            <p>Dump the AdminLTE context:</p>
+            <pre>
+                {%- verbatim -%}
+{{ dump(admin_lte_context) }}
+                {%- endverbatim -%}
+            </pre>
+
+            <p>Display a user avatar:</p>
+            <pre>
+                {%- verbatim -%}
+{% import "@AdminLTE/Macros/default.html.twig" as macro %}
+{{ macro.avatar(admin_lte_context.default_avatar, 'Username')  }}
+                {%- endverbatim -%}
+            </pre>
+
+            <p>Check for a config setting:</p>
+            <pre>
+                {%- verbatim -%}
+{% if admin_lte_context.fixed_layout %}
+    Show a fixed layout
+{% endif %}
+                {%- endverbatim -%}
+            </pre>
+        </div>
+    </div>
+
+{% endblock %}

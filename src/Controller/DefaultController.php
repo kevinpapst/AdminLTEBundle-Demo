@@ -62,6 +62,14 @@ class DefaultController extends Controller
         ]);
     }
 
+    /**
+     * @Route("/context", defaults={}, name="context")
+     */
+    public function context()
+    {
+        return $this->render('default/context.html.twig', []);
+    }
+
     public function userPreferences()
     {
         return $this->render('control-sidebar/settings.html.twig', []);
