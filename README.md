@@ -39,4 +39,8 @@ yarn install
 npm run build
 ```
 
+## Testing different languages
 
+To change the language, you need to edit the file `config/services.yaml` and change from `locale: 'en'` to something like `locale: 'ar'`.
+
+Be aware that ONLY the Admin theme translation will change (like the login screen and toolbar dropdowns), the demo itself is not translated! 
