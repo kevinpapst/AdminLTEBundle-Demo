@@ -59,17 +59,16 @@ class MenuBuilderSubscriber implements EventSubscriberInterface
             new MenuItemModel('forms', 'menu.form', 'forms', [], 'fab fa-wpforms')
         );
 
+        $event->addItem(
+            new MenuItemModel('context', 'AdminLTE context', 'context', [], 'fas fa-code')
+        );
+
         $demo = new MenuItemModel('demo', 'Demo', null, [], 'far fa-arrow-alt-circle-right');
         $demo->addChild(
             new MenuItemModel('sub-demo', 'Forms Demo 2', 'forms2', [], 'far fa-arrow-alt-circle-down')
         )->addChild(
             new MenuItemModel('sub-demo2', 'Form Sidebar Demo', 'forms3', [], 'far fa-arrow-alt-circle-up')
         );
-
-        $event->addItem(
-            new MenuItemModel('Context', 'AdminLTE context', 'context', [], 'fas fa-code')
-        );
-
         $event->addItem($demo);
 
         if ($this->security->isGranted('IS_AUTHENTICATED_REMEMBERED')) {

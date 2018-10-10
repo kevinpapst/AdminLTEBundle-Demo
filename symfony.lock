@@ -104,6 +104,12 @@
     "kevinpapst/adminlte-bundle": {
         "version": "dev-master"
     },
+    "knplabs/knp-menu": {
+        "version": "2.3.0"
+    },
+    "knplabs/knp-menu-bundle": {
+        "version": "v2.2.1"
+    },
     "monolog/monolog": {
         "version": "1.23.0"
     },
@@ -223,9 +229,6 @@
     },
     "symfony/intl": {
         "version": "v4.1.1"
-    },
-    "symfony/lts": {
-        "version": "4-dev"
     },
     "symfony/monolog-bridge": {
         "version": "v4.1.1"
