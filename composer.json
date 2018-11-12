@@ -22,14 +22,14 @@
         "symfony/swiftmailer-bundle": "^3.2",
         "symfony/translation": "^4.1",
         "symfony/twig-bundle": "^4.1",
-        "symfony/web-server-bundle": "^4.1",
         "symfony/webpack-encore-pack": "^1.0",
         "symfony/yaml": "^4.1"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.10",
         "symfony/debug-pack": "^1.0",
-        "symfony/dotenv": "^4.1"
+        "symfony/dotenv": "^4.1",
+        "symfony/web-server-bundle": "^4.1"
     },
     "config": {
         "preferred-install": {
