@@ -11,13 +11,14 @@ admin_lte:
         boxed_layout: true
         collapsed_sidebar: false
         mini_sidebar: true
-        control_sidebar:
-            home:
-                icon: fas fa-home
-                template: control-sidebar/home.html.twig
-            settings:
-                icon: fas fa-cogs
-                controller: 'App\Controller\DefaultController::userPreferences'
+
+    control_sidebar:
+        home:
+            icon: fas fa-home
+            template: control-sidebar/home.html.twig
+        settings:
+            icon: fas fa-cogs
+            controller: 'App\Controller\DefaultController::userPreferences'
 
 #    theme:
 #        widget:
