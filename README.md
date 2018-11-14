@@ -44,3 +44,10 @@ npm run build
 To change the language, you need to edit the file `config/services.yaml` and change from `locale: 'en'` to something like `locale: 'ar'`.
 
 Be aware that ONLY the Admin theme translation will change (like the login screen and toolbar dropdowns), the demo itself is not translated! 
+
+## Real world examples
+
+If you want to see the theme in action (in a real world application), checkout my Symfony 4 based time-tracking application **Kimai 2** at:
+https://github.com/kevinpapst/kimai2
+
+
