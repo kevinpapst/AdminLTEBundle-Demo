@@ -12,10 +12,16 @@ namespace App\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\MoneyType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TimeType;
+use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -57,13 +63,17 @@ class FormDemoModelType extends AbstractType
             ])
             ->add('someRadio', ChoiceType::class, ['choices' => $radios, 'expanded' => true])
             ->add('someChoices', ChoiceType::class, ['choices' => $choices, 'expanded' => true, 'multiple' => true])
-            ->add('username')
-            ->add('email')
+            ->add('username', TextType::class)
+            ->add('message', TextareaType::class)
+            ->add('termsAccepted', CheckboxType::class)
+            ->add('email', EmailType::class)
+            ->add('phone', TelType::class)
             ->add('date', DateType::class, ['widget' => 'single_text', 'html5' => false])
             ->add('time', TimeType::class, ['widget' => 'single_text', 'html5' => false])
-            ->add('termsAccepted', CheckboxType::class)
-            ->add('message', TextareaType::class)
-            ->add('price')
+            ->add('datetime', DateTimeType::class, ['widget' => 'single_text', 'html5' => false])
+            ->add('price', MoneyType::class)
+            ->add('password', PasswordType::class)
+            ->add('Homepage', UrlType::class)
         ;
     }
 
