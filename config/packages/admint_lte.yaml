@@ -36,8 +36,9 @@ admin_lte:
 
     knp_menu:
         enable: false
-        main_menu: adminlte_main
-        breadcrumb_menu: false
+        # the default value is adminlte_main, so we don't need to set it manually
+        #main_menu: adminlte_main
+        breadcrumb_menu: true
 
     routes:
         adminlte_welcome: homepage
