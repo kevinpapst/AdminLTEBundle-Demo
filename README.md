@@ -21,6 +21,7 @@ and then install all composer dependencies:
 cd AdminLTEBundle-Demo
 composer install
 ```
+Edit the `.env` file and change `APP_ENV` value to `dev`.
 
 Now spin up the PHP built-in webserver:
 
