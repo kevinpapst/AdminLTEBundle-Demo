@@ -10,13 +10,15 @@
 namespace App\Controller;
 
 use App\Form\FormDemoModelType;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\FormInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * Default controller
  */
-class DefaultController extends Controller
+class DefaultController extends AbstractController
 {
     /**
      * @Route("/", defaults={}, name="homepage")
@@ -29,9 +31,10 @@ class DefaultController extends Controller
     /**
      * @Route("/forms", defaults={}, name="forms")
      */
-    public function forms()
+    public function forms(Request $request)
     {
         $form = $this->createForm(FormDemoModelType::class);
+        $form = $this->handleForm($request, $form);
 
         return $this->render('default/form.html.twig', [
             'form' => $form->createView(),
@@ -41,11 +44,12 @@ class DefaultController extends Controller
     /**
      * @Route("/forms2", defaults={}, name="forms2")
      */
-    public function forms2()
+    public function forms2(Request $request)
     {
         $form = $this->createForm(FormDemoModelType::class);
+        $form = $this->handleForm($request, $form);
 
-        return $this->render('default/form2.html.twig', [
+        return $this->render('default/form-horizontal.html.twig', [
             'form' => $form->createView(),
         ]);
     }
@@ -53,13 +57,28 @@ class DefaultController extends Controller
     /**
      * @Route("/forms3", defaults={}, name="forms3")
      */
-    public function forms3()
+    public function forms3(Request $request)
     {
         $form = $this->createForm(FormDemoModelType::class);
+        $form = $this->handleForm($request, $form);
 
-        return $this->render('default/form3.html.twig', [
+        return $this->render('default/form-sidebar.html.twig', [
             'form' => $form->createView(),
         ]);
+    }
+
+    protected function handleForm(Request $request, FormInterface $form)
+    {
+        $form->handleRequest($request);
+        if ($form->isSubmitted()) {
+            if ($form->isValid()) {
+                $this->addFlash('success', "Fantastic work! You nailed it, form has no errors :-)");
+            } else {
+                $this->addFlash('error', "Form has errors ... please fix them!");
+            }
+        }
+
+        return $form;
     }
 
     /**

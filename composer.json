@@ -9,7 +9,7 @@
         "ext-iconv": "*",
         "doctrine/doctrine-bundle": "^1.9",
         "friendsofsymfony/user-bundle": "~2.0",
-        "kevinpapst/adminlte-bundle": "~2.1",
+        "kevinpapst/adminlte-bundle": "dev-horizontal-form",
         "knplabs/knp-menu-bundle": "^2.2",
         "sensio/framework-extra-bundle": "^5.2",
         "symfony/asset": "^4.1",
@@ -72,7 +72,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "~4.1.0"
+            "require": "~4.2.0"
         }
     }
 }

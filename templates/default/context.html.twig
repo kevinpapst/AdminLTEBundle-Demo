@@ -7,13 +7,18 @@
 {% block page_subtitle %}available AdminLTE configurations{% endblock %}
 
 {% block page_content %}
+    {% import "@AdminLTE/Macros/default.html.twig" as macro %}
 
     <div class="row">
         <div class="col-md-12">
             <p>
                 You have access to the following configurations within your twig template.
             </p>
-            {{ dump(admin_lte_context.options) }}
+            {% if app.environment == 'dev' %}
+                {% include 'default/context_dev.html.twig' %}
+            {% else %}
+                {{ macro.flash('warning', 'You are not running in "dev" environment, so dump() is not available.') }}
+            {% endif %}
         </div>
     </div>
 
