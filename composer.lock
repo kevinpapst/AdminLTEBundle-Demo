@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7f971418628c2417ece58ecee5b47653",
+    "content-hash": "0cb2924a5c94b5616ff6155a331e8bee",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1375,16 +1375,16 @@
         },
         {
             "name": "kevinpapst/adminlte-bundle",
-            "version": "dev-horizontal-form",
+            "version": "2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kevinpapst/AdminLTEBundle.git",
-                "reference": "cdfe67a791eeaa09030a1167e0f1cf3c575df6e1"
+                "reference": "0d095f9ee7ec1450100f65ea392b938296e15863"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kevinpapst/AdminLTEBundle/zipball/cdfe67a791eeaa09030a1167e0f1cf3c575df6e1",
-                "reference": "cdfe67a791eeaa09030a1167e0f1cf3c575df6e1",
+                "url": "https://api.github.com/repos/kevinpapst/AdminLTEBundle/zipball/0d095f9ee7ec1450100f65ea392b938296e15863",
+                "reference": "0d095f9ee7ec1450100f65ea392b938296e15863",
                 "shasum": ""
             },
             "require": {
@@ -1432,7 +1432,7 @@
                 }
             ],
             "description": "Admin theme bundle for Symfony 4 based on AdminLTE 2.4.8 with FOSUserBundle support",
-            "time": "2019-02-19T16:02:56+00:00"
+            "time": "2019-03-05T20:06:11+00:00"
         },
         {
             "name": "knplabs/knp-menu",
@@ -5785,9 +5785,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "kevinpapst/adminlte-bundle": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
