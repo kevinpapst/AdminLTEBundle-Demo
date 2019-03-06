@@ -65,9 +65,9 @@ class MenuBuilderSubscriber implements EventSubscriberInterface
 
         $demo = new MenuItemModel('demo', 'Demo', null, [], 'far fa-arrow-alt-circle-right');
         $demo->addChild(
-            new MenuItemModel('sub-demo', 'Forms Demo 2', 'forms2', [], 'far fa-arrow-alt-circle-down')
+            new MenuItemModel('sub-demo', 'Form - Horizontal', 'forms2', [], 'far fa-arrow-alt-circle-down')
         )->addChild(
-            new MenuItemModel('sub-demo2', 'Form Sidebar Demo', 'forms3', [], 'far fa-arrow-alt-circle-up')
+            new MenuItemModel('sub-demo2', 'Form - Sidebar', 'forms3', [], 'far fa-arrow-alt-circle-up')
         );
         $event->addItem($demo);
 

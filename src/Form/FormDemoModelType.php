@@ -24,6 +24,10 @@ use Symfony\Component\Form\Extension\Core\Type\TimeType;
 use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\Email;
+use Symfony\Component\Validator\Constraints\EqualTo;
+use Symfony\Component\Validator\Constraints\Length;
+use Symfony\Component\Validator\Constraints\NotNull;
 
 class FormDemoModelType extends AbstractType
 {
@@ -54,26 +58,83 @@ class FormDemoModelType extends AbstractType
         ];
 
         $builder
-            ->add('name', TextType::class, ['help' => 'some help text'])
-            ->add('gender', ChoiceType::class, ['choices' => ['male' => 'm', 'female' => 'f']])
+            ->add('name', TextType::class, [
+                'help' => 'This needs to be at least 3 character',
+                'constraints' => new Length(['min' => 3]),
+            ])
+            ->add('job', ChoiceType::class, [
+                'choices' => ['Pilot' => 'p', 'Doctor' => 'doc', 'Manager' => 'm', 'Developer' => 'd', 'Other' => 'o'],
+                'constraints' => new EqualTo(['value' => 'd', 'message' => 'Nope! The best job in the world is Developer ... at least for me ;-)']),
+                'help' => 'Choose the best job in the world',
+            ])
             ->add('bootstrapSelect', ChoiceType::class, [
                 'choices' => $options,
                 'multiple' => true,
+                'help' => 'Choose whatever you like',
                 'attr' => ['class' => 'selectpicker', 'data-size' => 5, 'data-live-search' => true]
             ])
-            ->add('someRadio', ChoiceType::class, ['choices' => $radios, 'expanded' => true])
-            ->add('someChoices', ChoiceType::class, ['choices' => $choices, 'expanded' => true, 'multiple' => true])
-            ->add('username', TextType::class)
-            ->add('message', TextareaType::class)
-            ->add('termsAccepted', CheckboxType::class)
-            ->add('email', EmailType::class)
-            ->add('phone', TelType::class)
-            ->add('date', DateType::class, ['widget' => 'single_text', 'html5' => false])
-            ->add('time', TimeType::class, ['widget' => 'single_text', 'html5' => false])
-            ->add('datetime', DateTimeType::class, ['widget' => 'single_text', 'html5' => false])
-            ->add('price', MoneyType::class)
-            ->add('password', PasswordType::class)
-            ->add('Homepage', UrlType::class)
+            ->add('someRadio', ChoiceType::class, [
+                'constraints' => [
+                    new NotNull(['message' => 'None is not allowed']),
+                    new EqualTo(['value' => 'opt1', 'message' => 'Only option 1 is valid'])
+                ],
+                'choices' => $radios,
+                'expanded' => true,
+                'required' => false,
+                'help' => 'Choose whatever you like',
+            ])
+            ->add('someChoices', ChoiceType::class, [
+                'choices' => $choices,
+                'expanded' => true,
+                'multiple' => true,
+                'required' => true,
+                'help' => 'Choose whatever you like',
+            ])
+            ->add('username', TextType::class, [
+                'required' => false,
+            ])
+            ->add('message', TextareaType::class, [
+                'required' => false,
+            ])
+            ->add('termsAccepted', CheckboxType::class, [
+                'required' => false,
+                'label' => false,
+            ])
+            ->add('termsAccepted', CheckboxType::class, [
+                'required' => false,
+            ])
+            ->add('email', EmailType::class, [
+                'required' => false,
+                'constraints' => new Email(),
+            ])
+            ->add('phone', TelType::class, [
+                'required' => false,
+            ])
+            ->add('date', DateType::class, [
+                'widget' => 'single_text',
+                'html5' => false,
+                'required' => false,
+            ])
+            ->add('time', TimeType::class, [
+                'widget' => 'single_text',
+                'html5' => false,
+                'required' => false,
+            ])
+            ->add('datetime', DateTimeType::class, [
+                'widget' => 'single_text',
+                'html5' => false,
+                'required' => false,
+            ])
+            ->add('price', MoneyType::class, [
+                'label' => false,
+                'required' => false,
+            ])
+            ->add('password', PasswordType::class, [
+                'required' => false,
+            ])
+            ->add('Homepage', UrlType::class, [
+                'required' => false,
+            ])
         ;
     }
 

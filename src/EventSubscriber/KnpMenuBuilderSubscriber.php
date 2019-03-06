@@ -72,11 +72,11 @@ class KnpMenuBuilderSubscriber implements EventSubscriberInterface
         )->setLabelAttribute('icon', 'far fa-arrow-alt-circle-right');
 
         $menu->getChild('demo')->addChild(
-            'sub-demo', ['route' => 'forms2', 'label' => 'Forms Demo 2', 'childOptions' => $event->getChildOptions()]
+            'sub-demo', ['route' => 'forms2', 'label' => 'Form - Horizontal', 'childOptions' => $event->getChildOptions()]
         )->setLabelAttribute('icon', 'far fa-arrow-alt-circle-down');
 
         $menu->getChild('demo')->addChild(
-            'sub-demo2', ['route' => 'forms3', 'label' => 'Form Sidebar Demo', 'childOptions' => $event->getChildOptions()]
+            'sub-demo2', ['route' => 'forms3', 'label' => 'Form - Sidebar', 'childOptions' => $event->getChildOptions()]
         )->setLabelAttribute('icon', 'far fa-arrow-alt-circle-up');
 
         if ($this->security->isGranted('IS_AUTHENTICATED_REMEMBERED')) {

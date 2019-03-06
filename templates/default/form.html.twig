@@ -9,7 +9,15 @@
             {% embed '@AdminLTE/Widgets/box-widget.html.twig' %}
                 {% block box_before %}{{ form_start(form) }}{% endblock %}
                 {% block box_title %}{{ 'A simple form demo'|trans }}{% endblock %}
-                {% block box_body %}{{ form_widget(form) }}{% endblock %}
+                {% block box_body %}
+                    <p>
+                        This form has the iCheck plugin activated (for styling of radio and checkbox inputs).
+                    </p>
+                    <p>
+                        Submit the form to see validation errors...
+                    </p>
+                    {{ form_widget(form) }}
+                {% endblock %}
                 {% block box_footer %}
                     <div class="pull-right">
                         <button type="reset" class="btn btn-warning "><i class="fa fa-times"></i> {{ 'Cancel'|trans }}</button>
