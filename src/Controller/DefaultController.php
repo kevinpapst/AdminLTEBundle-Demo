@@ -72,9 +72,9 @@ class DefaultController extends AbstractController
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
             if ($form->isValid()) {
-                $this->addFlash('success', "Fantastic work! You nailed it, form has no errors :-)");
+                $this->addFlash('success', 'Fantastic work! You nailed it, form has no errors :-)');
             } else {
-                $this->addFlash('error', "Form has errors ... please fix them!");
+                $this->addFlash('error', 'Form has errors ... please fix them!');
             }
         }
 

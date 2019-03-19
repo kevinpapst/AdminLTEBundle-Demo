@@ -12,6 +12,7 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Security\Core\User\EquatableInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
@@ -28,7 +29,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
  * @UniqueEntity("username")
  * @UniqueEntity("email")
  */
-class User extends BaseUser implements UserInterface
+class User extends BaseUser implements UserInterface, EquatableInterface
 {
     /**
      * @var int
@@ -38,4 +39,36 @@ class User extends BaseUser implements UserInterface
      * @ORM\Column(name="id", type="integer")
      */
     protected $id;
+
+    /**
+     * Checks if the user has to be logged out of the session,
+     * due to changed fields / security related settings (like roles and teams).
+     *
+     * @param UserInterface $user
+     * @return bool
+     */
+    public function isEqualTo(UserInterface $user)
+    {
+        if (!($user instanceof User)) {
+            return false;
+        }
+
+        if ($this->getUsername() !== $user->getUsername()) {
+            return false;
+        }
+
+        if ($this->getEmail() !== $user->getEmail()) {
+            return false;
+        }
+
+        if (count($this->getRoles()) !== count($user->getRoles())) {
+            return false;
+        }
+
+        if (count(array_diff($this->getRoles(), $user->getRoles())) !== 0) {
+            return false;
+        }
+
+        return true;
+    }
 }

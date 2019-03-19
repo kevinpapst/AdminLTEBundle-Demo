@@ -58,6 +58,7 @@ class MessageSubscriber implements EventSubscriberInterface
             $message = new MessageModel($userModel, 'Login to see more', new \DateTime('-2 days'));
             $message->setId(1);
             $event->addMessage($message);
+
             return;
         }
 
