@@ -1,18 +1,28 @@
+controllers:
+    resource: '../src/Controller/'
+    type: annotation
+    prefix: /{_locale}
+    requirements:
+        _locale: '%app_locales%'
+    defaults:
+        _locale: '%locale%'
+
 home:
     path: /
     controller: App\Controller\DefaultController::index
 
 fos_user_security:
+    prefix: /{_locale}
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 
 fos_user_registration:
-    prefix: /register
+    prefix: /{_locale}/register
     resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
 
 fos_user_resetting:
-    prefix: /resetting
+    prefix: /{_locale}/resetting
     resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
 
 fos_user_profile:
-    prefix: /profile
+    prefix: /{_locale}/profile
     resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
