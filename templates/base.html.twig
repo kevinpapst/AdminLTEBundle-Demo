@@ -1,3 +1,27 @@
 {% extends '@AdminLTE/layout/default-layout.html.twig' %}
 
 {% block page_title %}Demo application{% endblock %}
+
+{% block navbar_start %}
+    <li class="dropdown messages-menu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="far fa-globe"></i>
+            <span class="label label-primary">{{ app_locales|length }}</span>
+        </a>
+        <ul class="dropdown-menu">
+            <li class="header">Change language (scroll for more)</li>
+            <li>
+                <ul class="menu">
+                    {% for locale in app_locales %}
+                    <li>
+                        <a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': locale})) }}">
+                            {{ locale|language(app.request.get('_locale')) }}
+                            <span class="pull-right">{{ locale }}</span>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+        </ul>
+    </li>
+{% endblock %}
