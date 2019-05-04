@@ -9,23 +9,16 @@ Please read the [theme documentation](https://github.com/kevinpapst/AdminLTEBund
 
 # Installation
 
-Two steps:
+Simple as that:
 
 ```bash
-git clone https://github.com/kevinpapst/AdminLTEBundle-Demo.git
+composer create-project kevinpapst/adminlte-bundle-demo
 ```
 
-and then install all composer dependencies:
+Now spin up the PHP built-in webserver and enjoy the demo:
 
 ```bash
-cd AdminLTEBundle-Demo
-composer install
-```
-Edit the `.env` file and change `APP_ENV` value to `dev`.
-
-Now spin up the PHP built-in webserver:
-
-```bash
+cd adminlte-bundle-demo
 bin/console server:run
 ```
 
@@ -42,13 +35,12 @@ npm run build
 
 ## Testing different languages
 
-To change the language, you need to edit the file `config/services.yaml` and change from `locale: 'en'` to something like `locale: 'ar'`.
+**Be aware that ONLY the theme translations will change (like login screen and toolbar dropdowns), the demo itself is not translated!** 
 
-Be aware that ONLY the Admin theme translation will change (like the login screen and toolbar dropdowns), the demo itself is not translated! 
+- Simple solution: This demo supports locales via URLs, use the dropdown in the pages head navigation.
+- Permanent solution: Edit the file `config/services.yaml` and change from `locale: 'en'` to something like `locale: 'ar'`.
 
 ## Real world examples
 
 If you want to see the theme in action (in a real world application), checkout my Symfony 4 based time-tracking application **Kimai 2** at:
 https://github.com/kevinpapst/kimai2
-
-
