@@ -9,7 +9,7 @@
         "ext-iconv": "*",
         "doctrine/doctrine-bundle": "^1.9",
         "friendsofsymfony/user-bundle": "~2.0",
-        "kevinpapst/adminlte-bundle": "~2.6",
+        "kevinpapst/adminlte-bundle": "~2.8",
         "knplabs/knp-menu-bundle": "^2.2",
         "sensio/framework-extra-bundle": "^5.2",
         "symfony/asset": "^4.1",

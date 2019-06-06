@@ -11,6 +11,9 @@ admin_lte:
         boxed_layout: true
         collapsed_sidebar: false
         mini_sidebar: true
+        #max_navbar_notifications: 10
+        #max_navbar_tasks: 10
+        #max_navbar_messages: 10
 
     control_sidebar:
         home:

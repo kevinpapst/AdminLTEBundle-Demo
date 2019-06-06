@@ -58,8 +58,11 @@ class NotificationSubscriber implements EventSubscriberInterface
         ;
         $event->addNotification($notification);
 
-        $notification = new NotificationModel('Another message', Constants::TYPE_ERROR);
-        $event->addNotification($notification);
+        $event->addNotification(new NotificationModel('Another message', Constants::TYPE_ERROR));
+        $event->addNotification(new NotificationModel('Message 3', Constants::TYPE_INFO));
+        $event->addNotification(new NotificationModel('Message 4', Constants::TYPE_WARNING));
+        $event->addNotification(new NotificationModel('Message 5', Constants::TYPE_INFO, 'far fa-flag'));
+        $event->addNotification(new NotificationModel('Message 6', Constants::TYPE_SUCCESS));
 
         if (!$this->security->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
             return;

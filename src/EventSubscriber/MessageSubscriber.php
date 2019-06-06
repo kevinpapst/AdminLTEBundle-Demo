@@ -54,6 +54,9 @@ class MessageSubscriber implements EventSubscriberInterface
         $userModel = new UserModel();
         $userModel->setName($user ? $user->getUsername() : 'anonymous');
 
+        // Fake a higher backend amount to test label
+        $event->setTotal(13);
+
         if (!$this->security->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
             $message = new MessageModel($userModel, 'Login to see more', new \DateTime('-2 days'));
             $message->setId(1);
@@ -65,5 +68,8 @@ class MessageSubscriber implements EventSubscriberInterface
         $message = new MessageModel($userModel, 'You are awesome 💖', new \DateTime('-2 hours'));
         $message->setId(2);
         $event->addMessage($message);
+
+        // Fake a higher backend amount to test label
+        $event->setTotal(23);
     }
 }
