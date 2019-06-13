@@ -1380,16 +1380,16 @@
         },
         {
             "name": "kevinpapst/adminlte-bundle",
-            "version": "2.8",
+            "version": "2.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kevinpapst/AdminLTEBundle.git",
-                "reference": "9432978e70ae151458e0dd12d77ad9d00f864aca"
+                "reference": "62df10d0565f2ed5971b1a28ef30195ad1893807"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kevinpapst/AdminLTEBundle/zipball/9432978e70ae151458e0dd12d77ad9d00f864aca",
-                "reference": "9432978e70ae151458e0dd12d77ad9d00f864aca",
+                "url": "https://api.github.com/repos/kevinpapst/AdminLTEBundle/zipball/62df10d0565f2ed5971b1a28ef30195ad1893807",
+                "reference": "62df10d0565f2ed5971b1a28ef30195ad1893807",
                 "shasum": ""
             },
             "require": {
@@ -1441,7 +1441,7 @@
                 }
             ],
             "description": "Admin theme bundle for Symfony 4 based on AdminLTE 2.4.8 with FOSUserBundle support",
-            "time": "2019-06-06T23:32:52+00:00"
+            "time": "2019-06-13T11:25:39+00:00"
         },
         {
             "name": "knplabs/knp-menu",
