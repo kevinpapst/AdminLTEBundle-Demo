@@ -1380,16 +1380,16 @@
         },
         {
             "name": "kevinpapst/adminlte-bundle",
-            "version": "2.8.1",
+            "version": "2.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kevinpapst/AdminLTEBundle.git",
-                "reference": "62df10d0565f2ed5971b1a28ef30195ad1893807"
+                "reference": "9efc0f388ab908c7187ce7cbfc7d4ef6173e7da5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kevinpapst/AdminLTEBundle/zipball/62df10d0565f2ed5971b1a28ef30195ad1893807",
-                "reference": "62df10d0565f2ed5971b1a28ef30195ad1893807",
+                "url": "https://api.github.com/repos/kevinpapst/AdminLTEBundle/zipball/9efc0f388ab908c7187ce7cbfc7d4ef6173e7da5",
+                "reference": "9efc0f388ab908c7187ce7cbfc7d4ef6173e7da5",
                 "shasum": ""
             },
             "require": {
@@ -1441,7 +1441,7 @@
                 }
             ],
             "description": "Admin theme bundle for Symfony 4 based on AdminLTE 2.4.8 with FOSUserBundle support",
-            "time": "2019-06-13T11:25:39+00:00"
+            "time": "2019-06-20T13:29:17+00:00"
         },
         {
             "name": "knplabs/knp-menu",
@@ -4682,6 +4682,7 @@
                 "MIT"
             ],
             "description": "A pack for Symfony Encore",
+            "abandoned": "symfony/webpack-encore-bundle",
             "time": "2018-07-16T10:15:28+00:00"
         },
         {
