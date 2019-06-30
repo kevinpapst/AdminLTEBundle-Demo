@@ -1,0 +1,4 @@
+{% extends "@!AdminLTE/Navbar/user.html.twig" %}
+{% block member_since %}
+    <small>{{ 'Wow, you are active since: %date%'|trans({'%date%': user.memberSince|date('d.m.Y') }, 'AdminLTEBundle') }}</small>
+{% endblock %}
