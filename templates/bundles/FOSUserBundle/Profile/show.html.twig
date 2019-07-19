@@ -4,4 +4,7 @@
     {% block fos_user_content %}
         {% include "@FOSUser/Profile/show_content.html.twig" %}
     {% endblock fos_user_content %}
+    <div class="fos_user_user_show">
+        <p>Roles: {{ user.roles | join(', ') }}</p>
+    </div>
 {% endblock %}

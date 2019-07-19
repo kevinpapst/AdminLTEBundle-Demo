@@ -49,23 +49,19 @@ class User extends BaseUser implements UserInterface, EquatableInterface
      */
     public function isEqualTo(UserInterface $user)
     {
-        if (!($user instanceof User)) {
+        if (!$user instanceof self) {
             return false;
         }
 
-        if ($this->getUsername() !== $user->getUsername()) {
+        if ($this->password !== $user->getPassword()) {
             return false;
         }
 
-        if ($this->getEmail() !== $user->getEmail()) {
+        if ($this->salt !== $user->getSalt()) {
             return false;
         }
 
-        if (count($this->getRoles()) !== count($user->getRoles())) {
-            return false;
-        }
-
-        if (count(array_diff($this->getRoles(), $user->getRoles())) !== 0) {
+        if ($this->username !== $user->getUsername()) {
             return false;
         }
 
