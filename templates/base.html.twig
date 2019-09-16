@@ -25,3 +25,8 @@
         </ul>
     </li>
 {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% include 'includes/javascript.html.twig' %}
+{% endblock %}

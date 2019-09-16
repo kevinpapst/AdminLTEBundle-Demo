@@ -1,3 +1,8 @@
 {% extends '@AdminLTE/layout/default-layout-avanzu.html.twig' %}
 
 {% block avanzu_page_title %}Demo application{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% include 'includes/javascript.html.twig' %}
+{% endblock %}

@@ -1,0 +1,43 @@
+<script type="text/javascript">
+    $(function () {
+        // activate all dropdowns
+        jQuery('.dropdown-toggle').dropdown();
+        // activate the tooltip functionality
+        jQuery('[data-toggle="tooltip"]').tooltip();
+        // icheck radio and checkboxes
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
+        });
+        // auto hide success messages
+        setInterval(
+            function() {
+                jQuery('div.alert-success').alert('close');
+            },
+            5000
+        );
+    });
+
+    // date picker
+    jQuery('input[data-datepickerenable="on"]').each(function(index) {
+        let localeFormat = 'YYYY-MM-DD';
+        jQuery(this).daterangepicker({
+            singleDatePicker: true,
+            showDropdowns: true,
+            autoUpdateInput: false,
+            locale: {
+                format: localeFormat,
+                firstDay: 1,
+                applyLabel: 'Confirm',
+                cancelLabel: 'Cancel',
+                daysOfWeek: moment.weekdaysShort(),
+                monthNames: moment.months(),
+            }
+        });
+        jQuery(this).on('apply.daterangepicker', function(ev, picker) {
+            jQuery(this).val(picker.startDate.format(localeFormat));
+            jQuery(this).trigger("change");
+        });
+    });
+</script>

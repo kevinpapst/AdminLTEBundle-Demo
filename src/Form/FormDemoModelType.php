@@ -71,12 +71,12 @@ class FormDemoModelType extends AbstractType
                 'choices' => $options,
                 'multiple' => true,
                 'help' => 'Choose whatever you like',
-                'attr' => ['class' => 'selectpicker', 'data-size' => 5, 'data-live-search' => true]
+                'attr' => ['class' => 'selectpicker', 'data-size' => 5, 'data-live-search' => true],
             ])
             ->add('someRadio', ChoiceType::class, [
                 'constraints' => [
                     new NotNull(['message' => 'None is not allowed']),
-                    new EqualTo(['value' => 'opt1', 'message' => 'Only option 1 is valid'])
+                    new EqualTo(['value' => 'opt1', 'message' => 'Only option 1 is valid']),
                 ],
                 'choices' => $radios,
                 'expanded' => true,
@@ -115,14 +115,32 @@ class FormDemoModelType extends AbstractType
                 'html5' => false,
                 'required' => false,
             ])
+            ->add('date2', DateType::class, [
+                'label' => 'Date (HTML 5)',
+                'widget' => 'single_text',
+                'html5' => true,
+                'required' => false,
+            ])
             ->add('time', TimeType::class, [
                 'widget' => 'single_text',
                 'html5' => false,
                 'required' => false,
             ])
+            ->add('time2', TimeType::class, [
+                'label' => 'Time (HTML 5)',
+                'widget' => 'single_text',
+                'html5' => true,
+                'required' => false,
+            ])
             ->add('datetime', DateTimeType::class, [
                 'widget' => 'single_text',
                 'html5' => false,
+                'required' => false,
+            ])
+            ->add('datetime2', DateTimeType::class, [
+                'label' => 'Datetime (HTML 5)',
+                'widget' => 'single_text',
+                'html5' => true,
                 'required' => false,
             ])
             ->add('price', MoneyType::class, [
