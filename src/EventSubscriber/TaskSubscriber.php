@@ -40,7 +40,7 @@ class TaskSubscriber implements EventSubscriberInterface
     public static function getSubscribedEvents(): array
     {
         return [
-            ThemeEvents::THEME_TASKS => ['onTasks', 100],
+            TaskListEvent::class => ['onTasks', 100],
         ];
     }
 

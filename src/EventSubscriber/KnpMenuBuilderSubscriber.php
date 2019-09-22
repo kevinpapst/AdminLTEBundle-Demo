@@ -38,7 +38,7 @@ class KnpMenuBuilderSubscriber implements EventSubscriberInterface
     public static function getSubscribedEvents(): array
     {
         return [
-            ThemeEvents::THEME_SIDEBAR_SETUP_KNP_MENU => ['onSetupNavbar', 100],
+            KnpMenuEvent::class => ['onSetupNavbar', 100],
         ];
     }
 

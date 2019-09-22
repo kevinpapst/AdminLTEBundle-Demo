@@ -9,8 +9,8 @@
 
 namespace App\EventSubscriber;
 
+use KevinPapst\AdminLTEBundle\Event\BreadcrumbMenuEvent;
 use KevinPapst\AdminLTEBundle\Event\SidebarMenuEvent;
-use KevinPapst\AdminLTEBundle\Event\ThemeEvents;
 use KevinPapst\AdminLTEBundle\Model\MenuItemModel;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
@@ -39,8 +39,8 @@ class MenuBuilderSubscriber implements EventSubscriberInterface
     public static function getSubscribedEvents(): array
     {
         return [
-            ThemeEvents::THEME_SIDEBAR_SETUP_MENU => ['onSetupNavbar', 100],
-            ThemeEvents::THEME_BREADCRUMB => ['onSetupNavbar', 100],
+            SidebarMenuEvent::class => ['onSetupNavbar', 100],
+            BreadcrumbMenuEvent::class => ['onSetupNavbar', 100],
         ];
     }
 
