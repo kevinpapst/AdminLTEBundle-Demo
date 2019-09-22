@@ -2,7 +2,7 @@
 
 namespace App\Twig;
 
-use Symfony\Component\Intl\Intl;
+use Symfony\Component\Intl\Locales;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
 
@@ -25,6 +25,6 @@ class TwigExtensions extends AbstractExtension
      */
     public function getLanguageName(string $language)
     {
-        return ucfirst(Intl::getLocaleBundle()->getLocaleName($language, $language));
+        return ucfirst(Locales::getName($language, $language));
     }
 }
