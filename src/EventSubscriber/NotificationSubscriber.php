@@ -10,7 +10,6 @@
 namespace App\EventSubscriber;
 
 use KevinPapst\AdminLTEBundle\Event\NotificationListEvent;
-use KevinPapst\AdminLTEBundle\Event\ThemeEvents;
 use KevinPapst\AdminLTEBundle\Helper\Constants;
 use KevinPapst\AdminLTEBundle\Model\NotificationModel;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -40,7 +39,7 @@ class NotificationSubscriber implements EventSubscriberInterface
     public static function getSubscribedEvents(): array
     {
         return [
-            ThemeEvents::THEME_NOTIFICATIONS => ['onNotifications', 100],
+            NotificationListEvent::class => ['onNotifications', 100],
         ];
     }
 
