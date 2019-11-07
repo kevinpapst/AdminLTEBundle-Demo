@@ -56,7 +56,7 @@ class MenuBuilderSubscriber implements EventSubscriberInterface
         );
 
         $event->addItem(
-            new MenuItemModel('forms', 'menu.form', 'forms', [], 'fab fa-wpforms')
+            (new MenuItemModel('forms', 'menu.form', 'forms', [], 'fab fa-wpforms'))->setBadge(1)->setBadgeColor('red')
         );
 
         $event->addItem(
@@ -64,6 +64,7 @@ class MenuBuilderSubscriber implements EventSubscriberInterface
         );
 
         $demo = new MenuItemModel('demo', 'Demo', null, [], 'far fa-arrow-alt-circle-right');
+        $demo->setBadge(2);
         $demo->addChild(
             new MenuItemModel('sub-demo', 'Form - Horizontal', 'forms2', [], 'far fa-arrow-alt-circle-down')
         )->addChild(
