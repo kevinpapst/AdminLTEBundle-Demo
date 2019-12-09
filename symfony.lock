@@ -122,6 +122,9 @@
     "paragonie/random_compat": {
         "version": "v2.0.17"
     },
+    "php": {
+        "version": "7.2"
+    },
     "php-cs-fixer/diff": {
         "version": "v1.3.0"
     },
