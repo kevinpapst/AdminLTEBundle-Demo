@@ -25,17 +25,11 @@ class MenuBuilderSubscriber implements EventSubscriberInterface
      */
     private $security;
 
-    /**
-     * @param AuthorizationCheckerInterface $security
-     */
     public function __construct(AuthorizationCheckerInterface $security)
     {
         $this->security = $security;
     }
 
-    /**
-     * @return array
-     */
     public static function getSubscribedEvents(): array
     {
         return [
@@ -44,11 +38,6 @@ class MenuBuilderSubscriber implements EventSubscriberInterface
         ];
     }
 
-    /**
-     * Generate the main menu.
-     *
-     * @param SidebarMenuEvent $event
-     */
     public function onSetupNavbar(SidebarMenuEvent $event)
     {
         $event->addItem(
@@ -56,7 +45,7 @@ class MenuBuilderSubscriber implements EventSubscriberInterface
         );
 
         $event->addItem(
-            (new MenuItemModel('forms', 'menu.form', 'forms', [], 'fab fa-wpforms'))->setBadge(1)->setBadgeColor('red')
+            (new MenuItemModel('forms', 'menu.form', 'forms', [], 'fab fa-wpforms'))->setBadge(1)->setBadgeColor('danger')
         );
 
         $event->addItem(
@@ -72,6 +61,7 @@ class MenuBuilderSubscriber implements EventSubscriberInterface
         );
         $event->addItem($demo);
 
+        $event->addItem(new MenuItemModel('auth', 'AUTHENTICATION', ''));
         if ($this->security->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
             $event->addItem(
                 new MenuItemModel('logout', 'menu.logout', 'fos_user_security_logout', [], 'fas fa-sign-out-alt')
