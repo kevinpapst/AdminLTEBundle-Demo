@@ -3,26 +3,19 @@
 {% block page_title %}Demo application{% endblock %}
 
 {% block navbar_start %}
-    <li class="nav-item dropdown messages-menu">
-        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+    <li class="nav-item dropdown messages-menu d-none d-sm-block">
+        <a href="#" class="nav-link" data-toggle="dropdown">
             <i class="far fa-globe"></i>
-            <span class="label label-primary">{{ app_locales|length }}</span>
+            <span class="badge badge-primary navbar-badge">{{ app_locales|length }}</span>
         </a>
-        <ul class="dropdown-menu">
-            <li class="header">Change language (scroll for more)</li>
-            <li>
-                <ul class="menu">
-                    {% for locale in app_locales %}
-                    <li>
-                        <a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': locale})) }}">
-                            {{ locale|language(app.request.get('_locale')) }}
-                            <span class="pull-right">{{ locale }}</span>
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </li>
-        </ul>
+        <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg p-0">
+            {% for locale in app_locales %}
+                <a class="dropdown-item{% if app.request.locale == locale%} active{% endif %}" href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': locale})) }}">
+                    {{ locale|language(app.request.get('_locale')) }}
+                    <span class="float-right">{{ locale }}</span>
+                </a>
+            {% endfor %}
+        </div>
     </li>
 {% endblock %}
 

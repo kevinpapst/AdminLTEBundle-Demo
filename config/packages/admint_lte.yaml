@@ -7,8 +7,8 @@
 admin_lte:
     options:
         default_avatar: bundles/adminlte/images/default_avatar.png
-        fixed_layout: false
-        boxed_layout: true
+        fixed_layout: true
+        boxed_layout: false
         collapsed_sidebar: false
         mini_sidebar: true
         #max_navbar_notifications: 10
@@ -19,20 +19,19 @@ admin_lte:
         home:
             icon: fas fa-home
             template: control-sidebar/home.html.twig
-        settings:
-            icon: fas fa-cogs
-            controller: 'App\Controller\DefaultController::userPreferences'
+        #settings:
+        #    icon: fas fa-cogs
+        #    controller: 'App\Controller\DefaultController::userPreferences'
 
-#    theme:
-#        widget:
-#            type: warning
-#            bordered: true
+    theme:
+        widget:
+            type:
 #            collapsible: true
 #            collapsible_title: 'Collapse'
 #            removable: false
 #            removable_title: 'Remove'
 #            solid: false
-#            use_footer: false
+
 #        button:
 #            type: 'primary'
 #            size: false
