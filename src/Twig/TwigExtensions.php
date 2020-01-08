@@ -20,7 +20,6 @@ class TwigExtensions extends AbstractExtension
 
     /**
      * @param string $language
-     * @param string $inLocale
      * @return string
      */
     public function getLanguageName(string $language)

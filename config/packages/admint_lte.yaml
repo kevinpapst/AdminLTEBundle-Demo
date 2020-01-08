@@ -7,10 +7,13 @@
 admin_lte:
     options:
         default_avatar: bundles/adminlte/images/default_avatar.png
-        fixed_layout: true
-        boxed_layout: false
-        collapsed_sidebar: false
+        fixed_header: false
+        fixed_menu: false
+        fixed_footer: false
+        boxed_layout: true
+        collapsed_sidebar: true
         mini_sidebar: true
+        form_theme: default
         #max_navbar_notifications: 10
         #max_navbar_tasks: 10
         #max_navbar_messages: 10

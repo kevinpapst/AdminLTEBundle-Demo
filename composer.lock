@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a22a961aea5687dc65dcb1f813d35831",
+    "content-hash": "b47d3395609fa9c9c84175c6560252d6",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -311,16 +311,16 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "v2.10.0",
+            "version": "v2.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "0c9a646775ef549eb0a213a4f9bd4381d9b4d934"
+                "reference": "c2b8e6e82732a64ecde1cddf9e1e06cb8556e3d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/0c9a646775ef549eb0a213a4f9bd4381d9b4d934",
-                "reference": "0c9a646775ef549eb0a213a4f9bd4381d9b4d934",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/c2b8e6e82732a64ecde1cddf9e1e06cb8556e3d8",
+                "reference": "c2b8e6e82732a64ecde1cddf9e1e06cb8556e3d8",
                 "shasum": ""
             },
             "require": {
@@ -399,7 +399,7 @@
                 "sqlserver",
                 "sqlsrv"
             ],
-            "time": "2019-11-03T16:50:43+00:00"
+            "time": "2020-01-04T12:56:21+00:00"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -1239,27 +1239,26 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.12",
+            "version": "2.1.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "a6255605af39f2db7f5cb62e672bd8a7bad8d208"
+                "reference": "834593d5900615639208417760ba6a17299e2497"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/a6255605af39f2db7f5cb62e672bd8a7bad8d208",
-                "reference": "a6255605af39f2db7f5cb62e672bd8a7bad8d208",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/834593d5900615639208417760ba6a17299e2497",
+                "reference": "834593d5900615639208417760ba6a17299e2497",
                 "shasum": ""
             },
             "require": {
                 "doctrine/lexer": "^1.0.1",
-                "php": ">= 5.5"
+                "php": ">=5.5"
             },
             "require-dev": {
-                "dominicsayers/isemail": "dev-master",
-                "phpunit/phpunit": "^4.8.35||^5.7||^6.0",
-                "satooshi/php-coveralls": "^1.0.1",
-                "symfony/phpunit-bridge": "^4.4@dev"
+                "dominicsayers/isemail": "^3.0.7",
+                "phpunit/phpunit": "^4.8.36|^7.5.15",
+                "satooshi/php-coveralls": "^1.0.1"
             },
             "suggest": {
                 "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
@@ -1293,7 +1292,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2019-12-20T12:49:39+00:00"
+            "time": "2019-12-30T08:14:25+00:00"
         },
         {
             "name": "friendsofsymfony/user-bundle",
@@ -1423,16 +1422,16 @@
         },
         {
             "name": "kevinpapst/adminlte-bundle",
-            "version": "dev-master",
+            "version": "dev-adminlte-v3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/yudhir/AdminLTEBundle.git",
-                "reference": "5e19267f32a8f36179fa7f2283a10ddc1c2d0eae"
+                "url": "https://github.com/kevinpapst/AdminLTEBundle.git",
+                "reference": "7578e117072c7191016391e82cd11034c1d310b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yudhir/AdminLTEBundle/zipball/5e19267f32a8f36179fa7f2283a10ddc1c2d0eae",
-                "reference": "5e19267f32a8f36179fa7f2283a10ddc1c2d0eae",
+                "url": "https://api.github.com/repos/kevinpapst/AdminLTEBundle/zipball/7578e117072c7191016391e82cd11034c1d310b9",
+                "reference": "7578e117072c7191016391e82cd11034c1d310b9",
                 "shasum": ""
             },
             "require": {
@@ -1465,20 +1464,7 @@
                     "KevinPapst\\AdminLTEBundle\\": ""
                 }
             },
-            "scripts": {
-                "tests": [
-                    "vendor/bin/phpunit Tests/"
-                ],
-                "phpstan": [
-                    "vendor/bin/phpstan analyse . --level=5"
-                ],
-                "codestyle": [
-                    "vendor/bin/php-cs-fixer fix --dry-run --verbose --show-progress=none"
-                ],
-                "codestyle-fix": [
-                    "vendor/bin/php-cs-fixer fix"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1497,10 +1483,7 @@
                 }
             ],
             "description": "Admin theme bundle for Symfony 4 based on AdminLTE 2.4.8 with FOSUserBundle support",
-            "support": {
-                "source": "https://github.com/yudhir/AdminLTEBundle/tree/master"
-            },
-            "time": "2019-12-24T20:56:49+00:00"
+            "time": "2020-01-08T00:09:52+00:00"
         },
         {
             "name": "knplabs/knp-menu",
@@ -5353,6 +5336,7 @@
                 "code",
                 "zf"
             ],
+            "abandoned": "laminas/laminas-code",
             "time": "2019-12-10T19:21:15+00:00"
         },
         {
@@ -5407,6 +5391,7 @@
                 "events",
                 "zf2"
             ],
+            "abandoned": "laminas/laminas-eventmanager",
             "time": "2018-04-25T15:33:34+00:00"
         }
     ],
