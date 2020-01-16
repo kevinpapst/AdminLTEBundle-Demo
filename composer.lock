@@ -1419,16 +1419,16 @@
         },
         {
             "name": "kevinpapst/adminlte-bundle",
-            "version": "3.0.4",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kevinpapst/AdminLTEBundle.git",
-                "reference": "92adcca485481b0c6b24f725f932cc49eb9e63e4"
+                "reference": "5d43b46a7fb5a8404703aac279a8c53a160912b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kevinpapst/AdminLTEBundle/zipball/92adcca485481b0c6b24f725f932cc49eb9e63e4",
-                "reference": "92adcca485481b0c6b24f725f932cc49eb9e63e4",
+                "url": "https://api.github.com/repos/kevinpapst/AdminLTEBundle/zipball/5d43b46a7fb5a8404703aac279a8c53a160912b3",
+                "reference": "5d43b46a7fb5a8404703aac279a8c53a160912b3",
                 "shasum": ""
             },
             "require": {
@@ -1480,7 +1480,7 @@
                 }
             ],
             "description": "Admin theme bundle for Symfony 4 based on AdminLTE 2.4.8 with FOSUserBundle support",
-            "time": "2019-12-09T09:54:29+00:00"
+            "time": "2020-01-16T19:44:51+00:00"
         },
         {
             "name": "knplabs/knp-menu",
@@ -5330,6 +5330,7 @@
                 "code",
                 "zf"
             ],
+            "abandoned": "laminas/laminas-code",
             "time": "2019-10-05T23:18:22+00:00"
         },
         {
@@ -5384,6 +5385,7 @@
                 "events",
                 "zf2"
             ],
+            "abandoned": "laminas/laminas-eventmanager",
             "time": "2018-04-25T15:33:34+00:00"
         }
     ],
