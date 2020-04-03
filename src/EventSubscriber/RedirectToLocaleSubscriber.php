@@ -11,7 +11,7 @@ namespace App\EventSubscriber;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpKernel\Event\GetResponseEvent;
+use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
@@ -43,8 +43,6 @@ class RedirectToLocaleSubscriber implements EventSubscriberInterface
     private $defaultLocale = '';
 
     /**
-     * Constructor.
-     *
      * @param UrlGeneratorInterface $urlGenerator
      * @param string $locales Supported locales separated by '|'
      * @param string|null $defaultLocale
@@ -82,10 +80,7 @@ class RedirectToLocaleSubscriber implements EventSubscriberInterface
         ];
     }
 
-    /**
-     * @param GetResponseEvent $event
-     */
-    public function onKernelRequest(GetResponseEvent $event)
+    public function onKernelRequest(RequestEvent $event)
     {
         $request = $event->getRequest();
 
