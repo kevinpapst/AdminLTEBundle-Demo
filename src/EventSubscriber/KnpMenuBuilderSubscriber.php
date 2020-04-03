@@ -64,7 +64,10 @@ class KnpMenuBuilderSubscriber implements EventSubscriberInterface
         $menu->addChild(
             'forms',
             ['route' => 'forms', 'label' => 'menu.form', 'childOptions' => $event->getChildOptions()]
-        )->setLabelAttribute('icon', 'fab fa-wpforms');
+        )->setLabelAttribute('icon', 'fab fa-wpforms')->setExtra('badge', [
+            'color' => 'red',
+            'value' => 1,
+        ]);
 
         $menu->addChild(
             'context',
@@ -74,7 +77,10 @@ class KnpMenuBuilderSubscriber implements EventSubscriberInterface
         $menu->addChild(
             'demo',
             ['label' => 'Demo', 'childOptions' => $event->getChildOptions(), 'options' => ['branch_class' => 'treeview']]
-        )->setLabelAttribute('icon', 'far fa-arrow-alt-circle-right');
+        )->setLabelAttribute('icon', 'far fa-arrow-alt-circle-right')->setExtra('badges', [
+            ['value' => 2,],
+            ['value' => 'foo', 'color' => 'yellow'],
+        ]);
 
         $menu->getChild('demo')->addChild(
             'sub-demo',
