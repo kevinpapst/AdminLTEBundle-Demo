@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4e76ea8baf77c173a45e9ae79fa81f1d",
+    "content-hash": "53c3ec75846ee03be81dfc2aa8d84572",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1429,7 +1429,7 @@
         },
         {
             "name": "kevinpapst/adminlte-bundle",
-            "version": "dev-master",
+            "version": "3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kevinpapst/AdminLTEBundle.git",
@@ -6264,9 +6264,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "kevinpapst/adminlte-bundle": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
