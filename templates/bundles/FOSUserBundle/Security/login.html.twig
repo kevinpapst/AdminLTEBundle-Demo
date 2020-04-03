@@ -1,3 +1,13 @@
 {% extends '@AdminLTE/FOSUserBundle/Security/login.html.twig' %}
 
-{% block logo_login %}<b>Demo</b> Login{% endblock %}
+{% block logo_login %}
+    <b>Demo</b> Login
+{% endblock %}
+
+{% block login_box_error %}
+    {% if error is not defined or error is empty %}
+        {% set error = {'messageKey': 'Login with "admin/password" or "user/password"', 'messageData': {}} %}
+    {% endif %}
+    {{ parent() }}
+{% endblock %}
+
