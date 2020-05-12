@@ -5,6 +5,7 @@
 
 {% block document_title %}Dashboard browser title{% endblock %}
 {% block page_title %}Dashboard{% endblock %}
+{% block page_subtitle %}You are using the language: {{ app.request.locale|language(app.request.get('_locale')) }}{% endblock %}
 
 {% block page_content %}
     <div class="row">
