@@ -51,57 +51,40 @@ class KnpMenuBuilderSubscriber implements EventSubscriberInterface
     {
         $menu = $event->getMenu();
 
-        $menu->addChild(
-            'menu-label',
-            ['label' => 'Main Navigation', 'childOptions' => $event->getChildOptions()]
-        )->setAttribute('class', 'header');
+        $menu->addChild('homepage', ['route' => 'homepage', 'label' => 'menu.homepage', 'childOptions' => $event->getChildOptions()])
+            ->setLabelAttribute('icon', 'fas fa-tachometer-alt');
 
-        $menu->addChild(
-            'homepage',
-            ['route' => 'homepage', 'label' => 'menu.homepage', 'childOptions' => $event->getChildOptions()]
-        )->setLabelAttribute('icon', 'fas fa-tachometer-alt');
+        $menu->addChild('forms', ['route' => 'forms', 'label' => 'menu.form', 'childOptions' => $event->getChildOptions()])
+            ->setLabelAttribute('icon', 'fab fa-wpforms')->setExtra('badge', ['color' => 'danger', 'value' => 1]);
 
-        $menu->addChild(
-            'forms',
-            ['route' => 'forms', 'label' => 'menu.form', 'childOptions' => $event->getChildOptions()]
-        )->setLabelAttribute('icon', 'fab fa-wpforms')->setExtra('badge', [
-            'color' => 'red',
-            'value' => 1,
-        ]);
+        $menu->addChild('context', ['route' => 'context', 'label' => 'AdminLTE context', 'childOptions' => $event->getChildOptions()])
+            ->setLabelAttribute('icon', 'fas fa-code');
 
-        $menu->addChild(
-            'context',
-            ['route' => 'context', 'label' => 'AdminLTE context', 'childOptions' => $event->getChildOptions()]
-        )->setLabelAttribute('icon', 'fas fa-code');
+        $menu->addChild('demo', ['label' => 'Demo', 'childOptions' => $event->getChildOptions(), 'options' => []])
+            ->setLabelAttribute('icon', 'far fa-arrow-alt-circle-right')
+            ->setExtra('badges', [['value' => 2], ['value' => 'foo', 'color' => 'warning']]);
 
-        $menu->addChild(
-            'demo',
-            ['label' => 'Demo', 'childOptions' => $event->getChildOptions(), 'options' => ['branch_class' => 'treeview']]
-        )->setLabelAttribute('icon', 'far fa-arrow-alt-circle-right')->setExtra('badges', [
-            ['value' => 2,],
-            ['value' => 'foo', 'color' => 'yellow'],
-        ]);
-
-        $menu->getChild('demo')->addChild(
-            'sub-demo',
-            ['route' => 'forms2', 'label' => 'Form - Horizontal', 'childOptions' => $event->getChildOptions()]
-        )->setLabelAttribute('icon', 'far fa-arrow-alt-circle-down');
+        $menu->getChild('demo')
+            ->addChild('sub-demo', ['route' => 'forms2', 'label' => 'Form - Horizontal', 'childOptions' => $event->getChildOptions()])
+            ->setLabelAttribute('icon', 'far fa-arrow-alt-circle-down');
 
         $menu->getChild('demo')->addChild(
             'sub-demo2',
             ['route' => 'forms3', 'label' => 'Form - Sidebar', 'childOptions' => $event->getChildOptions()]
         )->setLabelAttribute('icon', 'far fa-arrow-alt-circle-up');
 
+        $menu->addChild('auth', ['label' => 'AUTHENTICATION', 'childOptions' => $event->getChildOptions()])
+            ->setLabelAttribute('icon', 'far fa-arrow-alt-circle-right')
+            ->setExtra('badges', [['value' => 2], ['value' => 'foo', 'color' => 'warning']]);
+
         if ($this->security->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
-            $menu->addChild(
-                'logout',
-                ['route' => 'fos_user_security_logout', 'label' => 'menu.logout', 'childOptions' => $event->getChildOptions()]
-            )->setLabelAttribute('icon', 'fas fa-sign-out-alt');
+            $menu->getChild('auth')
+                ->addChild('logout', ['route' => 'fos_user_security_logout', 'label' => 'menu.logout', 'childOptions' => $event->getChildOptions()])
+                ->setLabelAttribute('icon', 'fas fa-sign-out-alt');
         } else {
-            $menu->addChild(
-                'login',
-                ['route' => 'fos_user_security_login', 'label' => 'menu.login', 'childOptions' => $event->getChildOptions()]
-            )->setLabelAttribute('icon', 'fas fa-sign-in-alt');
+            $menu->getChild('auth')
+                ->addChild('login', ['route' => 'fos_user_security_login', 'label' => 'menu.login', 'childOptions' => $event->getChildOptions()])
+                ->setLabelAttribute('icon', 'fas fa-sign-in-alt');
         }
     }
 }
