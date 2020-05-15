@@ -24,12 +24,18 @@ class KnpMenuBuilderSubscriber implements EventSubscriberInterface
      */
     private $security;
 
+     /**
+     * @var ParameterBagInterface
+     */
+    private $parameterBag;
+
     /**
      * @param AuthorizationCheckerInterface $security
      */
-    public function __construct(AuthorizationCheckerInterface $security)
+    public function __construct(AuthorizationCheckerInterface $security, ParameterBagInterface $parameterBag)
     {
         $this->security = $security;
+        $this->parameterBag = $parameterBag;
     }
 
     /**
@@ -86,15 +92,23 @@ class KnpMenuBuilderSubscriber implements EventSubscriberInterface
             ['route' => 'forms3', 'label' => 'Form - Sidebar', 'childOptions' => $event->getChildOptions()]
         )->setLabelAttribute('icon', 'far fa-arrow-alt-circle-up');
 
+        // the security routes are defined in admin_lte.yaml
+        $routes = ($this->parameterBag->get('admin_lte_theme.routes'));
         if ($this->security->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
+            /*  Where did $routes['adminlte_logout'] go?
             $menu->addChild(
                 'logout',
-                ['route' => 'fos_user_security_logout', 'label' => 'menu.logout', 'childOptions' => $event->getChildOptions()]
+                ['route' => 'app_logout', 'label' => 'menu.logout', 'childOptions' => $event->getChildOptions()]
             )->setLabelAttribute('icon', 'fas fa-sign-out-alt');
+            */
         } else {
             $menu->addChild(
                 'login',
-                ['route' => 'fos_user_security_login', 'label' => 'menu.login', 'childOptions' => $event->getChildOptions()]
+                ['route' => $routes['adminlte_login'], 'label' => 'menu.login', 'childOptions' => $event->getChildOptions()]
+            )->setLabelAttribute('icon', 'fas fa-sign-in-alt');
+            $menu->addChild(
+                'register',
+                ['route' => $routes['adminlte_registration'], 'label' => 'menu.register', 'childOptions' => $event->getChildOptions()]
             )->setLabelAttribute('icon', 'fas fa-sign-in-alt');
         }
     }
