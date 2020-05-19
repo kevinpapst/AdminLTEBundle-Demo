@@ -19,16 +19,10 @@ Encore
     // generate only two files: app.js and app.css
     .addEntry('adminlte', './assets/adminlte-demo.js')
 
-    // enable sass/scss parser
-    .enableSassLoader()
-
     // show OS notifications when builds finish/fail
     .enableBuildNotifications()
 
-    // empty the outputPath dir before each build
-    .cleanupOutputBeforeBuild()
-
-    // for "legacy" applications that require $/jQuery as a global variable
+    // because we need $/jQuery as a global variable
     .autoProvidejQuery()
 
     // see https://symfony.com/doc/current/frontend/encore/bootstrap.html
