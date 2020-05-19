@@ -30,7 +30,7 @@ If you want to re-compile the frontend assets execute:
 
 ```
 yarn install
-npm run build
+yarn run build
 ```
 
 ## Testing different languages
@@ -42,5 +42,4 @@ npm run build
 
 ## Real world examples
 
-If you want to see the theme in action (in a real world application), checkout my Symfony 4 based time-tracking application **Kimai 2** at:
-https://github.com/kevinpapst/kimai2
+If you want to see the theme in action (in a real world application), checkout my [time-tracking application Kimai](https://github.com/kevinpapst/kimai2).
