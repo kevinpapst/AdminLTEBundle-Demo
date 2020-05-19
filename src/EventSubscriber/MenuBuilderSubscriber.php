@@ -49,11 +49,12 @@ class MenuBuilderSubscriber implements EventSubscriberInterface
         );
 
         $event->addItem(
-            new MenuItemModel('context', 'AdminLTE context', 'context', [], 'fas fa-code')
+            (new MenuItemModel('context', 'AdminLTE context', 'context', [], 'fas fa-code'))->setBadge(13)
         );
 
         $demo = new MenuItemModel('demo', 'Demo', null, [], 'far fa-arrow-alt-circle-right');
         $demo->setBadge(2);
+        $demo->setBadgeColor('warning');
         $demo->addChild(
             new MenuItemModel('sub-demo', 'Form - Horizontal', 'forms2', [], 'far fa-arrow-alt-circle-down')
         )->addChild(
