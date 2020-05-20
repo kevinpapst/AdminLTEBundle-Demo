@@ -10,7 +10,7 @@
 {% block avanzu_page_content %}
     <div class="row">
         <div class="col-md-12">
-            {% embed '@AdminLTE/Widgets/box-widget.html.twig' %}
+            {% embed '@AdminLTE/Widgets/box-widget.html.twig' with {'color': 'danger'} %}
                 {% form_theme form '@AdminLTE/layout/form-theme-horizontal.html.twig' %}
                 {% block box_before %}{{ form_start(form) }}{% endblock %}
                 {% block box_title %}{{ 'A horizontal form demo'|trans }}{% endblock %}

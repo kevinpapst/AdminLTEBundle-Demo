@@ -1,12 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block page_title %} Form demo {% endblock %}
-{% block page_subtitle %} Fullscreen width form {% endblock %}
+{% block page_title %}Fullscreen width form{% endblock %}
 
 {% block page_content %}
     <div class="row">
         <div class="col-md-12">
-            {% embed '@AdminLTE/Widgets/box-widget.html.twig' %}
+            {% embed '@AdminLTE/Widgets/box-widget.html.twig' with {'color': 'primary'} %}
                 {% block box_before %}{{ form_start(form) }}{% endblock %}
                 {% block box_title %}{{ 'A simple form demo'|trans }}{% endblock %}
                 {% block box_body %}

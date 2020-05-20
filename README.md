@@ -15,11 +15,12 @@ Simple as that:
 composer create-project kevinpapst/adminlte-bundle-demo
 ```
 
-Now spin up the PHP built-in webserver and enjoy the demo:
+I use the Symfony webserver, which is a great development tool, please read how to install it at:
+[https://symfony.com/doc/current/setup/symfony_server.html](https://symfony.com/doc/current/setup/symfony_server.html)
 
 ```bash
 cd adminlte-bundle-demo
-bin/console server:run
+symfony serve
 ```
 
 and see it running at [http://127.0.0.1:8000](http://127.0.0.1:8000)

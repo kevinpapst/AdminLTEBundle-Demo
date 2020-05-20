@@ -1,12 +1,12 @@
 {% extends 'base-avanzu.html.twig' %}
 
-{% block avanzu_page_title %} Form demo {% endblock %}
-{% block avanzu_page_subtitle %}with activated iCheck plugin and sidebar content{% endblock %}
+{% block avanzu_page_title %}iCheck plugin and sidebar content{% endblock %}
+{% block avanzu_page_subtitle %}{% endblock %}
 
 {% block avanzu_page_content %}
     <div class="row">
         <div class="col-md-6">
-            {% embed '@AdminLTE/Widgets/box-widget.html.twig' %}
+            {% embed '@AdminLTE/Widgets/box-widget.html.twig' with {'color': 'info'} %}
                 {% block box_before %}{{ form_start(form) }}{% endblock %}
                 {% block box_title %}{{ 'A form demo'|trans }}{% endblock %}
                 {% block box_body %}
@@ -34,7 +34,6 @@
                 'icon'  : 'fas fa-comments',
             } %}
                 {% block box_text %}Vestibulum ante ipsum primis{% endblock %}
-                {% block box_number %}999.9{% endblock %}
                 {% block progress_description %}Works as well without progress bar{% endblock %}
             {% endembed %}
 
@@ -44,7 +43,6 @@
                 {% import '@AdminLTE/Macros/buttons.html.twig'  as btn %}
                 {% block box_title %}Widget box title{% endblock %}
                 {% block box_body %}
-                    <div class="callout callout-info">
                         Sed libero ipsum, auctor ac volutpat ac, adipiscing a enim. Nulla convallis quam eget tortor
                         dictum lobortis. Aenean tincidunt arcu id lectus facilisis imperdiet. Curabitur in orci nisl.
                         Nullam vitae arcu in tellus malesuada sollicitudin ut in sem. Ut eu nunc lacus, sit amet
@@ -55,7 +53,6 @@
                         Vivamus imperdiet vestibulum tellus, quis rutrum magna eleifend quis. Pellentesque convallis
                         metus nisl. Sed eu dolor massa, sit amet luctus nulla. Mauris sit amet diam urna, eget volutpat
                         nunc.
-                    </div>
                 {% endblock %}
             {% endembed %}
         </div>
