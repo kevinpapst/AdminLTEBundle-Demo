@@ -10,8 +10,8 @@ admin_lte:
         fixed_header: false
         fixed_menu: false
         fixed_footer: false
-        boxed_layout: true
-        collapsed_sidebar: true
+        boxed_layout: false
+        collapsed_sidebar: false
         mini_sidebar: true
         form_theme: default
         #max_navbar_notifications: 10
