@@ -10,7 +10,6 @@
 namespace App\EventSubscriber;
 
 use KevinPapst\AdminLTEBundle\Event\TaskListEvent;
-use KevinPapst\AdminLTEBundle\Event\ThemeEvents;
 use KevinPapst\AdminLTEBundle\Helper\Constants;
 use KevinPapst\AdminLTEBundle\Model\TaskModel;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
