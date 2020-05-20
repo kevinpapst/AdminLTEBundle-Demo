@@ -10,7 +10,6 @@
 namespace App\EventSubscriber;
 
 use KevinPapst\AdminLTEBundle\Event\KnpMenuEvent;
-use KevinPapst\AdminLTEBundle\Event\ThemeEvents;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
 
