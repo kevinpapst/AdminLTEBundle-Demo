@@ -1498,16 +1498,16 @@
         },
         {
             "name": "kevinpapst/adminlte-bundle",
-            "version": "3.2.2",
+            "version": "3.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kevinpapst/AdminLTEBundle.git",
-                "reference": "99d714d2d5bed7f0828d11ba9bd847d69a49f750"
+                "reference": "e79543f789ce4b1560c2d113eb40de12d390c74a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kevinpapst/AdminLTEBundle/zipball/99d714d2d5bed7f0828d11ba9bd847d69a49f750",
-                "reference": "99d714d2d5bed7f0828d11ba9bd847d69a49f750",
+                "url": "https://api.github.com/repos/kevinpapst/AdminLTEBundle/zipball/e79543f789ce4b1560c2d113eb40de12d390c74a",
+                "reference": "e79543f789ce4b1560c2d113eb40de12d390c74a",
                 "shasum": ""
             },
             "require": {
@@ -1569,7 +1569,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-05-20T13:22:08+00:00"
+            "time": "2020-05-20T15:37:54+00:00"
         },
         {
             "name": "knplabs/knp-menu",
