@@ -10,7 +10,6 @@
 namespace App\EventSubscriber;
 
 use KevinPapst\AdminLTEBundle\Event\KnpMenuEvent;
-use KevinPapst\AdminLTEBundle\Event\ThemeEvents;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
 
@@ -78,7 +77,7 @@ class KnpMenuBuilderSubscriber implements EventSubscriberInterface
             'demo',
             ['label' => 'Demo', 'childOptions' => $event->getChildOptions(), 'options' => ['branch_class' => 'treeview']]
         )->setLabelAttribute('icon', 'far fa-arrow-alt-circle-right')->setExtra('badges', [
-            ['value' => 2,],
+            ['value' => 2],
             ['value' => 'foo', 'color' => 'yellow'],
         ]);
 
