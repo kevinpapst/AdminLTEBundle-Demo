@@ -3,11 +3,7 @@ var Encore = require('@symfony/webpack-encore');
 Encore
 // the project directory where compiled assets will be stored
     .setOutputPath('public/bundles/adminlte/')
-
-    // the public path used by the web server to access the previous directory
     .setPublicPath('/bundles/adminlte/')
-
-    // delete old files before creating them
     .cleanupOutputBeforeBuild()
 
     // add debug data in development
@@ -31,14 +27,6 @@ Encore
     })
 
     .disableSingleRuntimeChunk()
-
-    // add hash after file name
-    .configureFilenames({
-        js: '[name].js?[contenthash]',
-        css: '[name].css?[contenthash]',
-        images: 'images/[name].[ext]?[hash:8]',
-        fonts: 'fonts/[name].[ext]?[hash:8]'
-    })
 ;
 
 module.exports = Encore.getWebpackConfig();

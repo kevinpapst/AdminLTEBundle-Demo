@@ -19,4 +19,4 @@ fos_user:
             name: fos_user_resetting_form
             validation_groups: [ResetPassword, Default]
     service:
-        mailer: fos_user.mailer.twig_swift
+        mailer: fos_user.mailer.default

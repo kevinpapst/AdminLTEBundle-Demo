@@ -15,14 +15,12 @@ Simple as that:
 composer create-project kevinpapst/adminlte-bundle-demo
 ```
 
-Now spin up the PHP built-in webserver and enjoy the demo:
+Use the [Symfony binary](https://symfony.com/download) to quickly start up a development server:
 
 ```bash
 cd adminlte-bundle-demo
-bin/console server:run
+SHELL_VERBOSITY=2 symfony serve
 ```
-
-and see it running at [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ## Frontend assets
 

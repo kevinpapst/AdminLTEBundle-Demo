@@ -7,29 +7,32 @@
         "php": "^7.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "doctrine/doctrine-bundle": "^1.9",
-        "friendsofsymfony/user-bundle": "~2.0",
-        "kevinpapst/adminlte-bundle": "^3.2",
+        "composer/package-versions-deprecated": "1.11.99.1",
+        "doctrine/common": "^2",
+        "doctrine/doctrine-bundle": "^2.0",
+        "doctrine/orm": "^2",
+        "kevinpapst/adminlte-bundle": "dev-master",
+        "kimai/user-bundle": "^1.1",
         "knplabs/knp-menu-bundle": "^2.2",
         "sensio/framework-extra-bundle": "^5.2",
-        "symfony/asset": "^4.1",
-        "symfony/console": "^4.1",
+        "symfony/asset": "^4.4",
+        "symfony/console": "^4.4",
+        "symfony/dotenv": "^4.4",
         "symfony/flex": "^1.0",
-        "symfony/form": "^4.1",
-        "symfony/framework-bundle": "^4.1",
-        "symfony/orm-pack": "^1.0",
-        "symfony/security-bundle": "^4.1",
+        "symfony/form": "^4.4",
+        "symfony/framework-bundle": "^4.4",
+        "symfony/security-bundle": "^4.4",
+        "symfony/stopwatch": "4.4.*",
         "symfony/swiftmailer-bundle": "^3.2",
-        "symfony/translation": "^4.1",
-        "symfony/twig-bundle": "^4.1",
-        "symfony/webpack-encore-pack": "^1.0",
-        "symfony/yaml": "^4.1"
+        "symfony/translation": "^4.4",
+        "symfony/twig-bundle": "^4.4",
+        "symfony/webpack-encore-bundle": "^1.9",
+        "symfony/yaml": "^4.4"
     },
     "require-dev": {
+        "symfony/web-profiler-bundle": "^4.4",
         "friendsofphp/php-cs-fixer": "^2.10",
-        "symfony/debug-pack": "^1.0",
-        "symfony/dotenv": "^4.1",
-        "symfony/web-server-bundle": "^4.1"
+        "symfony/debug-bundle": "^4.4"
     },
     "config": {
         "platform": {
@@ -83,7 +86,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "~4.3"
+            "require": "4.4.*"
         }
     }
 }

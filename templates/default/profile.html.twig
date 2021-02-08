@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block page_title %}User profile{% endblock %}
+{% block page_subtitle %}Show some details{% endblock %}
+
+{% block page_content %}
+    <div class="row">
+        <div class="col-md-12">
+            {% embed '@AdminLTE/Widgets/box-widget.html.twig' %}
+                {% import "@AdminLTE/Macros/default.html.twig" as macros %}
+                {% block box_body %}
+                    <div class="box-body box-profile">
+                        {{ macros.avatar(admin_lte_context.default_avatar, user.username, 'profile-user-img img-responsive img-circle')  }}
+
+                        <h3 class="profile-username text-center">{{ user.username }}</h3>
+
+                        <p class="text-muted text-center">A demo user</p>
+
+                        <ul class="list-group list-group-unbordered">
+                            <li class="list-group-item">
+                                <b>Roles</b> <a class="pull-right">
+                                    <span class="label label-success">
+                                    {{ user.roles|join('</span> <span class="label label-success">')|raw }}
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <b>Last login</b> <a class="pull-right">{{ user.lastLogin|date }}</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
+                    </div>
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </div>
+{% endblock %}

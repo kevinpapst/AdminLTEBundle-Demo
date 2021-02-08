@@ -67,6 +67,16 @@ class DefaultController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/profile", defaults={}, name="profile")
+     */
+    public function profile(Request $request)
+    {
+        return $this->render('default/profile.html.twig', [
+            'user' => $this->getUser(),
+        ]);
+    }
+
     protected function handleForm(Request $request, FormInterface $form)
     {
         $form->handleRequest($request);

@@ -38,7 +38,7 @@ admin_lte:
 #            size: false
 
     knp_menu:
-        enable: false
+        enable: true
         # the default value is adminlte_main, so we don't need to set it manually
         #main_menu: adminlte_main
         breadcrumb_menu: true
@@ -55,4 +55,4 @@ admin_lte:
         adminlte_notifications: homepage
         adminlte_task: homepage
         adminlte_tasks: homepage
-        adminlte_profile: fos_user_profile_show
+        adminlte_profile: fos_user_profile

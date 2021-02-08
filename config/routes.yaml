@@ -24,5 +24,5 @@ fos_user_resetting:
     resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
 
 fos_user_profile:
-    prefix: /{_locale}/profile
-    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    path: /{_locale}/profile
+    controller: App\Controller\DefaultController::profile
