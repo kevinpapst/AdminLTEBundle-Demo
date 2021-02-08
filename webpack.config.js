@@ -15,6 +15,8 @@ Encore
     // generate only two files: app.js and app.css
     .addEntry('adminlte', './assets/adminlte-demo.js')
 
+    .copyFiles({ from: './assets/images', to: 'images/[path][name].[ext]' })
+
     // show OS notifications when builds finish/fail
     .enableBuildNotifications()
 
