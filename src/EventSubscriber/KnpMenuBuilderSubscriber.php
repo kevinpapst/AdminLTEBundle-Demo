@@ -74,6 +74,11 @@ class KnpMenuBuilderSubscriber implements EventSubscriberInterface
         )->setLabelAttribute('icon', 'fas fa-code');
 
         $menu->addChild(
+            'menu-divider',
+            ['label' => '<hr />']
+        )->setExtra('safe_label', true);
+
+        $menu->addChild(
             'demo',
             ['label' => 'Demo', 'childOptions' => $event->getChildOptions(), 'options' => ['branch_class' => 'treeview']]
         )->setLabelAttribute('icon', 'far fa-arrow-alt-circle-right')->setExtra('badges', [
