@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cff0f3380be3afb61750a96ee0c7fc8f",
+    "content-hash": "238d3912121fb6d8e5f1bc0cadd29137",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1385,7 +1385,7 @@
         },
         {
             "name": "kevinpapst/adminlte-bundle",
-            "version": "dev-master",
+            "version": "3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kevinpapst/AdminLTEBundle.git",
@@ -1423,7 +1423,6 @@
             "suggest": {
                 "knplabs/knp-menu-bundle": "Allows easy menu integration"
             },
-            "default-branch": true,
             "type": "symfony-bundle",
             "autoload": {
                 "psr-4": {
@@ -1451,7 +1450,7 @@
             "description": "Admin theme bundle for Symfony 4+ based on AdminLTE 2.4 with FOSUserBundle support",
             "support": {
                 "issues": "https://github.com/kevinpapst/AdminLTEBundle/issues",
-                "source": "https://github.com/kevinpapst/AdminLTEBundle/tree/master"
+                "source": "https://github.com/kevinpapst/AdminLTEBundle/tree/3.3"
             },
             "funding": [
                 {
@@ -6706,9 +6705,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "kevinpapst/adminlte-bundle": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
